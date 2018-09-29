@@ -23,7 +23,7 @@
 			
 			<ul id="menu-menu" class="flex-container flex-align-center justify-center align-center container height-fixed-portrait">
 				<li id="menu-item-19533" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-944 current_page_item menu-item-19533"><a class="navtitle" href="index.html">主页</a></li>
-				<li id="menu-item-22497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22497"><a class="navtitle" href="datavisz.html">我的工作</a></li>
+				<li id="menu-item-22497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22497"><a class="navtitle" href="work.html">我的工作</a></li>
 				<li id="menu-item-952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-952"><a class="navtitle" href="creativecoding.html">创意编程</a></li>
 			<!-- 	
 				<li id="menu-item-949" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-949"><a class="navtitle" href="aboutme.html">关于我</a></li> -->
@@ -101,107 +101,117 @@
 
 
 	<!-- 下面是文章内容 -->
-<div class="container-fluid">
-	<div class="row">
-		<div class="card-1">
-			<img class="card-img" src="images/color/color-1.jpg" alt="Card image">	
+	<div class="container-fluid">
+
+		<div class="row" style="background: #ededed; padding-bottom: 100px">
+			<div class="col-sm"></div>
+			<div class="row">
+				<div class="col-sm"></div>
+				<div class="col-sm-5">
+					<img class="card-img" src="images/color/jj.png" alt="Card image">
+				</div>
+				<div class="col-sm-5">
+					<img class="card-img" src="images/color/kk.png" alt="Card image">
+				</div>
+
+
+			<div class="col-sm"></div>
 		</div>
-	</div>
-
-
-	<div class="row">
-		<div class="col-sm"></div>
-		<div class="col-sm-6">
-			<p>可视化发现</p>
-			<HR></HR>
-			<p>我整理美剧、英剧、日剧、韩剧、国产剧的前500部热门电视剧的海报，最后做出了日剧和韩剧的海报。</p>
-			<p>对比日韩电视剧的海报，发现日本还好喜爱用红色为主色或者点缀色</p>
-		</div>
-		<div class="col-sm"></div>
-	</div>
-
-
-
-	<div class="row">
-		<div class="col-sm"></div>
-		<div class="col-sm-6">
-			<h4>数据与设计</h4>
-			<HR></HR>
-			<p>首先爬取 <a href="https://movie.douban.com/tv/#!type=tv&tag=%E6%97%A5%E5%89%A7&sort=recommend&page_limit=20&page_start=0" target="_blank" >豆瓣热门电视剧</a> 的名字、评分以及海报图片地址，整理成一个csv文件。</p>
-			<p>然后在Processing里面，通过二十行不到的代码就可以把所有图片下载下来。原理是读取csv上的图片地址，播放每一帧并保存500张海报一分钟不到就可以全部以同样大小，序列号+海报名字的格式存储，节约了大量的时间。</p>
-		</div>
-		<div class="col-sm"></div>
-	</div>
-
-
-
-	<div class="row">	
-		<div class="col-sm"></div>	
-		<div class="col-sm-5">
-			<img class="card-img" src="images/color/color-2.png" alt="Card image">
-		</div>
-		<div class="col-sm-5">
-			<img class="card-img" src="images/color/color-3.png" alt="Card image">
-		</div>
-		<div class="col-sm"></div>
-	</div>
-
-
-	<div class="row">
-		<div class="col-sm"></div>
-		<div class="col-sm-6">
-			<p>然后通过 <a  href="http://mkweb.bcgsc.ca/color-summarizer/" target="_blank" >IMAGE COLOR SUMMARIZER</a> 分析颜色，这个工具可以快速分析出一张图片的前x种颜色（最多10种），每种颜色的占比，各种颜色的维度，比如RGB、HSB、CMYK等。网站提供了一张图片上传分析的网页版，但一次性处理500张图片靠手动传是相当累的，所以它还提供了cmd模式的批量操作，可以连续分析数百张照片。</p>
-		</div>
-		<div class="col-sm"></div>
-	</div>
-
-	<div class="row">
-		<div class="col-sm-3"></div>		
-		<div class="col-sm-6">
-			<img class="card-img" src="images/color/color-4.png" alt="Card image">
-		</div>
-		<div class="col-sm-3"></div>
-	</div>
-
-	<div class="row">
-		<div class="col-sm"></div>
-		<div class="col-sm-6">
-			<p>根据IMAGE COLOR SUMMARIZER得出的结果，用processing根据每种颜色占比写出树状图的结构<span class="icon-point-down"></span></p>
-		</div>
-		<div class="col-sm"></div>
-	</div>
-
-
-	<div class="row">
-		<div class="col-sm-4"></div>		
-		<div class="col-sm-4">
-			<img class="card-img" src="images/color/color-7.png" alt="Card image">
-		</div>
-		<div class="col-sm-4"></div>	
-
-	</div>
-
-
-
-	<div class="row">
-		<div class="col-sm"></div>
-		<div class="col-sm-6">
-			<p>做成一个海报的可视化风格之后，在processing再根据一定的排序原则，把其他海报也画出啊来。</p>
-			<p>排序原则根据图片颜色占比第一的色调的色相（H）排序；若色相（H）相同，则再更具饱和度（S）排序；再则根据明亮度（V）排序</p>
-		</div>
-		<div class="col-sm"></div>
-	</div>
-
-	<div class="row">
-		<div class="col-sm-3"></div>
-		<div class="col-sm-6">
-			<img class="card-img" src="images/color/color-5.png" alt="Card image">
-			<p>最后输出PDF格式，再在Ai里面做一些排版。</p>
-		</div>
-		<div class="col-sm-3">
-		</div>
-	</div>
 </div>
+
+		<div class="row">
+			<div class="col-sm"></div>
+			<div class="col-sm-6">
+				<p>可视化发现</p>
+				<HR></HR>
+				<p>我整理美剧、英剧、日剧、韩剧、国产剧的前500部热门电视剧的海报，最后做出了日剧和韩剧的海报。</p>
+				<p>对比日韩电视剧的海报，发现日本还好喜爱用红色为主色或者点缀色</p>
+			</div>
+			<div class="col-sm"></div>
+		</div>
+
+
+
+		<div class="row">
+			<div class="col-sm"></div>
+			<div class="col-sm-6">
+				<h4>数据与设计</h4>
+				<HR></HR>
+				<p>首先爬取 <a href="https://movie.douban.com/tv/#!type=tv&tag=%E6%97%A5%E5%89%A7&sort=recommend&page_limit=20&page_start=0" target="_blank" >豆瓣热门电视剧</a> 的名字、评分以及海报图片地址，整理成一个csv文件。</p>
+				<p>然后在Processing里面，通过二十行不到的代码就可以把所有图片下载下来。原理是读取csv上的图片地址，播放每一帧并保存500张海报一分钟不到就可以全部以同样大小，序列号+海报名字的格式存储，节约了大量的时间。</p>
+			</div>
+			<div class="col-sm"></div>
+		</div>
+
+
+
+		<div class="row">	
+			<div class="col-sm"></div>	
+			<div class="col-sm-5">
+				<img class="card-img" src="images/color/color-2.png" alt="Card image">
+			</div>
+			<div class="col-sm-5">
+				<img class="card-img" src="images/color/color-3.png" alt="Card image">
+			</div>
+			<div class="col-sm"></div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-sm"></div>
+			<div class="col-sm-6">
+				<p>然后通过 <a  href="http://mkweb.bcgsc.ca/color-summarizer/" target="_blank" >IMAGE COLOR SUMMARIZER</a> 分析颜色，这个工具可以快速分析出一张图片的前x种颜色（最多10种），每种颜色的占比，各种颜色的维度，比如RGB、HSB、CMYK等。网站提供了一张图片上传分析的网页版，但一次性处理500张图片靠手动传是相当累的，所以它还提供了cmd模式的批量操作，可以连续分析数百张照片。</p>
+			</div>
+			<div class="col-sm"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3"></div>		
+			<div class="col-sm-6">
+				<img class="card-img" src="images/color/color-4.png" alt="Card image">
+			</div>
+			<div class="col-sm-3"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm"></div>
+			<div class="col-sm-6">
+				<p>根据IMAGE COLOR SUMMARIZER得出的结果，用processing根据每种颜色占比写出树状图的结构<span class="icon-point-down"></span></p>
+			</div>
+			<div class="col-sm"></div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-sm-4"></div>		
+			<div class="col-sm-4">
+				<img class="card-img" src="images/color/color-7.png" alt="Card image">
+			</div>
+			<div class="col-sm-4"></div>	
+
+		</div>
+
+
+
+		<div class="row">
+			<div class="col-sm"></div>
+			<div class="col-sm-6">
+				<p>做成一个海报的可视化风格之后，在processing再根据一定的排序原则，把其他海报也画出啊来。</p>
+				<p>排序原则根据图片颜色占比第一的色调的色相（H）排序；若色相（H）相同，则再更具饱和度（S）排序；再则根据明亮度（V）排序</p>
+			</div>
+			<div class="col-sm"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6">
+				<img class="card-img" src="images/color/color-5.png" alt="Card image">
+				<p>最后输出PDF格式，再在Ai里面做一些排版。</p>
+			</div>
+			<div class="col-sm-3">
+			</div>
+		</div>
+	</div>
 
 
 
