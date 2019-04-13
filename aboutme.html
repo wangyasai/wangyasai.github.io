@@ -17,23 +17,41 @@
 
 	<script type="text/javascript" src="js/p5.min.js"></script>
 	<script type="text/javascript" src="js/p5.dom.min.js"></script>
-
 	<script type='text/javascript' src='js/wp-embed.min.js'></script>
 
 	<style type="text/css">
-	img.wp-smiley,
-	img.emoji {
-		display: inline !important;
-		border: none !important;
-		box-shadow: none !important;
-		height: 1em !important;
-		width: 1em !important;
-		margin: 0 .07em !important;
-		vertical-align: -0.1em !important;
-		background: none !important;
-		padding: 0 !important;
-	}
-</style>
+		img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 .07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		}
+
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		html,body{
+			width: 100%;
+		}
+
+	
+			canvas{
+				position:absolute;
+				top: 20vh;
+				z-index: -1;
+			}
+	
+
+	</style>
 
 </head>
 
@@ -48,8 +66,7 @@
 			<ul id="menu-menu" class="flex-container flex-align-center justify-center align-center container height-fixed-portrait">
 				<li id="menu-item-19533" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-944 current_page_item menu-item-19533"><a class="navtitle" href="index.html">主页</a></li>
 				<li id="menu-item-22497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22497"><a class="navtitle" href="work.html">我的工作</a></li>
-				<li id="menu-item-22497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22497"><a class="navtitle" href="project.html">个人项目</a></li>
-				<li id="menu-item-952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-952"><a class="navtitle" href="creativecoding.html">创意编程</a></li>			
+				<li id="menu-item-952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-952"><a class="navtitle" href="designtools.html">设计神器</a></li>			
 				<li id="menu-item-949" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-949"><a class="navtitle" href="aboutme.html">关于我</a></li>
 
 			</ul>		
@@ -93,41 +110,36 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-2"></div>
-			<div class="col-sm-3">
-				<img id='img' class='min' src='images/aboutme/0.jpg' style= 'display: table-cell;vertical-align: middle; '>
+			<div class="col-sm-8">
+				<!-- <h1 style = "padding-top: 200px;padding-bottom: 220px;text-align: center;">自传</h1> -->
+		<!-- 		<img id='img' class='min' src='images/aboutme/0.jpg' style= 'display: table-cell;vertical-align: middle; '>
 			</div>
-				<div class="col-sm-5">
-					<p>hi, 我是亚赛。</p>
-					<p></p>
-					<h2>工作经历</h2>
-					<p>2016.6 - 至今</p>
-					<p>澎湃新闻美数课栏目 | 信息可视化设计师</p>
-					<HR></HR>
-					<h2>获奖经历</h2>
-					<p></p>
-					<p></p>
-				</div>
+			<div class="col-sm-5">
+				<p>hi, 我是亚赛。</p>
+				<p></p>
+				<h2>学历</h2>
+				<p>南京大学金陵学院广告系</p>
+				<h2>工作经历</h2>
+				<p>2016.6 - 至今</p>
+				<p>澎湃新闻美数课栏目 | 信息可视化设计师</p>
+				<HR></HR>
+				<h2>凯度信息之美长名单</h2>
+				
+				<p><a href ="https://www.informationisbeautifulawards.com/showcase/3148-even-at-shanghai-s-marriage-market-it-s-hard-to-find-a-date" ,target ="_black">Information is beautiful Shortlist</a></p>
+				<h2>凯度信息之美长名单</h2>
+				<p><a href ="https://www.informationisbeautifulawards.com/showcase/3138-how-i-met-your-mother-through-your-grandparents" ,target ="_black">Information is beautiful Longlist</a></p>
+ -->
+			</div>
 			<div class="col-sm-2"></div>		
 		</div>
 
-
-		<div class="row">
-			<div class="col-sm-3">
-				
-			</div>		
-			<div class="col-sm-6">
-				<p>相亲角的数据获取和处理都十分不易，874份相亲广告人工录入数据再整理～辛苦我可爱的同事们了。</p>
-				<p>在相亲角，除了那一张张相亲广告印象深刻，公园走到两旁摆放相亲广告的雨伞也非常惹眼，所以我们想结合雨伞这个元素去可视化每个人的相亲信息。</p>
-			</div>
-			<div class="col-sm-3"></div>	
-		</div>
 	</div>
 
 
+<script type="text/javascript" src="js/sketch5.js"></script>
 
 
-
-	<div class ="iconlink">	
+	<div class ="iconlink" style="margin-top:120vh">	
 		<div class = "social">
 			<span><a class="icon-weibo" href="https://weibo.com/psaiaevegas/profile?rightmod=1&wvr=6&mod=personnumber"  target="_blank"  data-icon="&#xe906;" ></a></span>
 			<span><a class="icon-zhihu" href="https://www.zhihu.com/people/wang-ya-sai/activities"  target="_blank"  data-icon="&#xe907;"></a></span>
