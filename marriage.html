@@ -13,18 +13,27 @@
 	
 	<script src="jquery-2.1.1.js" type="text/javascript"></script>
 	<style>
-	.max{width:160%; height:auto;}
-	.min{width:100%; height:auto;}
-</style>
+		.max{width:160%; height:auto;}
+		.min{width:100%; height:auto;}
+	</style>
 
-<script>
-	$(function(){
-		$('#img').click(function(){
-			$(this).toggleClass('min');
-			$(this).toggleClass('max');
+	<script>
+		$(function(){
+			$('#img').click(function(){
+				$(this).toggleClass('min');
+				$(this).toggleClass('max');
+			});
 		});
-	});
-</script>
+	</script>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?44f8fa2f0b239ea3093628142486b48a";
+			var s = document.getElementsByTagName("script")[0]; 
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
 
 </head>
 
