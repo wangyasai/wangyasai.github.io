@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-touch-fullscreen" content="no">
+  <link rel="icon" href="images/1.ico" type="image/x-icon">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.slim.min.js"></script>
+
+
+  <script src="js/p5.min.js"></script>
+  <script src="js/p5.dom.min.js"></script>
+  <script src="js/p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>春节禁放烟花后，城市空气如何？</title>
+
+
+
+
+</head>
+<body> <script src="js/sketch.js"></script>
+  <div class="container">
+
+
+   <div class ="firework"><iframe src="images/firework1.svg"  frameborder="0"></iframe></div>
+   <div class ="firework2"><iframe src="images/firework1.svg"  frameborder="0"></iframe></div>
+   <div class ="firework3"><iframe src="images/firework1.svg"  frameborder="0"></iframe></div>
+   <div class="page page-cover">    
+    <iframe class="title_pc" src="images/title_pc.svg"  frameborder="0"></iframe>
+    <iframe class="title_mb" src="images/title_mb.svg"  frameborder="0"></iframe>
+    <div class="lead">     
+     <p class = "lead_mb">烟花爆竹对空气的影响有多大？禁放令的效果又如何？澎湃新闻梳理了50座城市过往两年的烟花爆竹管理政策，
+     并对比了各座城市除夕夜的空气质量。</p>
+     <p class = "lead_pc">烟花爆竹对空气的影响有多大？禁放令的效果又如何？</p> 
+     <p class = "lead_pc">澎湃新闻梳理了50座城市过往两年的烟花爆竹管理政策，</p>
+     <p class = "lead_pc">并对比了各座城市除夕夜的空气质量。</p>
+     <img class = "logo" scr="images/logo.png"></div>
+   </div>
+  
+ </div>
+</div>
+</body>
+
+
+<script>
+  $(document).ready(function(){
+    var window_width = $(window).width(); 
+    if(window_width < 750){
+      $(".title_mb").show();
+      $(".lead_mb").show();
+      $(".title_pc").hide();
+      $(".lead_pc").hide();
+      $(".firework2").hide();
+    }else{
+     $(".title_pc").show();
+     $(".lead_pc").show();
+     $(".title_mb").hide();
+     $(".lead_mb").hide();
+   }
+ });
+</script>
+
+
+<script type="text/javascript">
+  $("#defaultCanvas0").removeAttr("width");
+  $("#defaultCanvas0").removeAttr("height");
+  $(window).scroll(function() {
+    var window_height = $(window).height();
+    var body_scroll_height = $(window).scrollTop();
+  });
+</script>
+
+</html>
