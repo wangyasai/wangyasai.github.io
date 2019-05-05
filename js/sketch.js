@@ -22,22 +22,6 @@ function draw() {
   }
   pop();
   fill(20);
-
-
-
-
-  var s = map(width,375,2000,20,50);
-
-  stroke('#F2F2F2');
-  strokeWeight(s*1.5);
-  line(0,height/2,width,height/2);
-
-  noStroke();
-  textSize(s);
-  textAlign(CENTER,CENTER);
-  fill(200, 0, 74);
-
-  text("Hi，我是亚赛，一名可视化设计师。",width/2, height/2)
 }
 
 function branch(len) {
