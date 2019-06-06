@@ -22,7 +22,7 @@ function setup(){
 
 function draw(){
   background(255);
-  fill('#019959');
+  fill('#FC8AA3');
   rect(0,height*0.2,width,height);
   smooth();
   if(width<800){
@@ -32,8 +32,8 @@ function draw(){
   }
   for(var x = margin; x < width-margin; x+=50){
     for(var  y = margin+height*0.2; y<height-margin;y+=50){
-      var from = color("#EFC3CA");
-      var to = color("#EFC3CA");
+      var from = color("#2351FE");
+      var to = color("#2351FE");
       var percent = norm(x,0,width);
       var between = lerpColor(from, to, percent);
       fill(between);
