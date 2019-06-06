@@ -3,6 +3,8 @@ body{
 	padding:0px;
 	font-weight: 300;
 	font-size: 20pt;
+  width: 100%;
+  overflow-x:hidden
 }
 
 
