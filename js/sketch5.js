@@ -5,8 +5,6 @@ function setup () {
 function draw () {
   background (255);
                      
-
-  
   strokeWeight(10);
   fill(245,15,15); //red
   rect(mouseX, 100, 400, mouseY/2); 
