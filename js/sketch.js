@@ -3,45 +3,66 @@
 var Engine = Matter.Engine,
 Render = Matter.Render,
 World = Matter.World,
-Bodies = Matter.Bodies;
+Bodies = Matter.Bodies,
+Runner = Matter.Runner,
+MouseConstraint = Matter.MouseConstraint,
+Mouse = Matter.Mouse,
+Constraint = Matter.Constraint;
 
 // create an engine
 var engine,world;
 var circles = [];
+var mConstraint;
+
 
 
 var ground,groundL,groundR;
-let t = ["p5.js","processing","Ai","Ps","Data","Design","Python","Indesign","Matter.js","Github","Yasai","AE"];
-let r= [6,7,7,6,6,6,3,3,4,3,8,5,4];
+let t = ["p5.js","Processing","Ai","Ps","Data","Design","Python","Indesign","Matter.js","Github","Yasai","AE"];
+let r= [6,7,7,6,6,6,2,3,2,3,8,5,4];
 
 
 function setup () {
-	createCanvas (windowWidth, windowHeight); 
+	var canvas =createCanvas (windowWidth, windowHeight); 
 	engine = Engine.create();
 	world = engine.world;
 	Engine.run(engine);
 	var options = {
 		isStatic: true
 	}
-	ground = Bodies.rectangle( width/2, height, width*2,1, options);
-	groundL = Bodies.rectangle( 0, height/2, 1,height,options);
-	groundR = Bodies.rectangle( width, height/2, 1, height,options);
-	World.add(world, [ground,groundL,groundR]);
+	ground = Bodies.rectangle( width/2, height, width*3,2, options);
+	groundL = Bodies.rectangle( 0, height/2, 2,height*3,options);
+	groundR = Bodies.rectangle( width, height/2, 2, height*3,options);
+	groundT = Bodies.rectangle( width/2, -300,width*3,100,options);
+	World.add(world, [ground,groundL,groundR,groundT]);
 	for(var i = 0 ; i < t.length; i++){
 		var radius = map(r[i],0,10,30,70);
 		var n = map(windowWidth,400,2000,1,2.5);
-		circles.push(new Circle(random(width),random(-500), radius*n,t[i]));
+		circles.push(new Circle(random(width),random(-200), radius*n,t[i]));
 	}
+
+
+	var canvasmouse = Mouse.create(canvas.elt);
+	console.log(canvasmouse);
+	canvasmouse.pixelRatio = 2; 
+	var options = {
+		mouse: canvasmouse
+	}
+
+
+	mConstraint = MouseConstraint.create(engine,options);
+	World.add(world, mConstraint);
+
+
 } 
 
 
 
 function draw () {
-	background ('#E76988');
+	background ('#FC8AA3');
 
 	fill(255,70);
 	noStroke();
-	textSize(40);
+	textSize(30);
 	textAlign(CENTER);
 	text("HI, 我是亚赛", width/2, height/3 );
 	text("数据可视化设计师", width/2, height/2.4);
@@ -50,4 +71,19 @@ function draw () {
 	for(var i = 0; i < t.length; i++){
 		circles[i].show();
 	}   
+
+
+	if(mConstraint.body){	 
+		print("!");
+		var pos = mConstraint.body.position;
+		fill('#3B00C2');
+		ellipse(pos.x, pos.y,this.r*2);
+	}
 }
+
+
+
+
+
+
+
