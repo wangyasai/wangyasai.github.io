@@ -17,8 +17,8 @@ var mConstraint;
 
 
 var ground,groundL,groundR;
-let t = ["p5.js","Processing","Ai","Ps","Data","Design","Python","Indesign","Matter.js","Github","Yasai","AE"];
-let r= [6,7,7,6,6,6,2,3,2,3,8,5,4];
+let t = ["p5.js","Processing","Ai","Ps","Data","Design","Python","Indesign","Matter.js","Github","Yasai","AE","QGis"];
+let r= [6,7,7,6,6,6,1,3,2,3,8,5,4,4];
 
 
 function setup () {
@@ -80,10 +80,11 @@ function draw () {
 
 	if(mConstraint.body){	 
 		print("!");
-		var pos = mConstraint.body.position;
 		fill('#3B00C2');
+		var pos = mConstraint.body.position;
 		ellipse(pos.x, pos.y,this.r*2);
 	}
+
 }
 
 
