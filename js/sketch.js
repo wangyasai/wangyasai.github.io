@@ -59,6 +59,11 @@ function setup () {
 
 function draw () {
 	background ('#FC8AA3');
+	var percent = norm(sin(frameCount/100), -1, 1);
+	var between = lerpColor(color('#97E4FF'),color('#FC8AA3'), percent);
+	fill(between);
+	noStroke();
+	rect(0,0,width,height);
 
 	fill(255,70);
 	noStroke();

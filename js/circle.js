@@ -22,7 +22,7 @@ this.show = function(){
 
 
   fill('#2452FF');
-  ellipse(0,0,this.r*2);
+  ellipse(0,0,this.r*2-2);
 
   stroke(255);
   noFill();
