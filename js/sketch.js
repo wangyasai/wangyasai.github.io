@@ -58,6 +58,7 @@ function setup () {
 
 
 function draw () {
+	pixelDensity(2);
 	background ('#FC8AA3');
 	var percent = norm(sin(frameCount/100), -1, 1);
 	var between = lerpColor(color('#97E4FF'),color('#FC8AA3'), percent);
