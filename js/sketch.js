@@ -42,7 +42,6 @@ function setup () {
 
 
 	var canvasmouse = Mouse.create(canvas.elt);
-	console.log(canvasmouse);
 	canvasmouse.pixelRatio = 2; 
 	var options = {
 		mouse: canvasmouse
@@ -58,8 +57,9 @@ function setup () {
 
 
 function draw () {
+	pixelDensity(2);
 	background ('#FC8AA3');
-	var percent = norm(sin(frameCount/100), -1, 1);
+	var percent = norm(sin(PI/2+frameCount/100), -1, 1);
 	var between = lerpColor(color('#97E4FF'),color('#FC8AA3'), percent);
 	fill(between);
 	noStroke();
@@ -76,14 +76,6 @@ function draw () {
 	for(var i = 0; i < t.length; i++){
 		circles[i].show();
 	}   
-
-
-	if(mConstraint.body){	 
-		print("!");
-		fill('#3B00C2');
-		var pos = mConstraint.body.position;
-		ellipse(pos.x, pos.y,this.r*2);
-	}
 
 }
 
