@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?wh1q5r');
-  src:  url('fonts/icomoon.eot?wh1q5r#iefix') format('embedded-opentype'),
-  url('fonts/icomoon.ttf?wh1q5r') format('truetype'),
-  url('fonts/icomoon.woff?wh1q5r') format('woff'),
-  url('fonts/icomoon.svg?wh1q5r#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?wh1q5r');
+  src:  url('../fonts/icomoon.eot?wh1q5r#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.ttf?wh1q5r') format('truetype'),
+  url('../fonts/icomoon.woff?wh1q5r') format('woff'),
+  url('../fonts/icomoon.svg?wh1q5r#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -39,22 +39,22 @@
 
 
 
-a:link{
+.social a:link{
   color:#3c3c3c;
   text-decoration:none; 
 }
 
-a:visited{
+.social a:visited{
   color:#3c3c3c;
   text-decoration:none; 
 }
 
-a:hover{
+.social a:hover{
   color:#FF458C; 
   text-decoration: none;
 }
 
-a:active { 
+.social a:active { 
   color:#FFFFFF; 
   text-decoration:none; 
 } 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>陨石掉落地图</title>
+	<link rel="icon" href="../image/logo.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+	
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="../js/p5.min.js"></script>
+	<script src="../js/p5.dom.min.js"></script>
+	<style>
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		html,body{
+			width: 100%;
+		}
+
+		@media screen and (max-width: 750px) {
+			canvas{
+				position:absolute;
+				top: 220vh;
+				z-index: -1;
+			}
+		}
+		@media screen and (max-width: 2000px) {
+			canvas{
+				position:absolute;
+				top: 90vh;
+				z-index: -1;
+			}
+		}
+
+	</style>
+
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?44f8fa2f0b239ea3093628142486b48a";
+			var s = document.getElementsByTagName("script")[0]; 
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+</head>
+
+
+<body>
+	<div class="nav-slanted"></div>
+	<!-- Full screen menu -->
+	<div class="nav-full-screen height-fixed height-fixed-xs height-fixed-portrait height-100 hidden">
+		<nav>
+			<ul id="menu-menu" class="flex-container flex-align-center justify-center align-center container height-fixed-portrait">
+				<li id="menu-item-19533" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-944 current_page_item menu-item-19533"><a class="navtitle" href="../index.html">主页</a></li>
+				<li id="menu-item-22497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22497"><a class="navtitle" href="../work.html">我的工作</a></li>
+				<li id="menu-item-952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-952"><a class="navtitle" href="../designtools.html">设计工具</a></li>
+				<li id="menu-item-952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-952"><a class="navtitle" href="../dailyPractice.html">日常练习</a></li>	
+				<!-- <li id="menu-item-949" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-949"><a class="navtitle" href="../aboutme.html">关于我</a></li> -->
+			</ul>		
+		</nav>
+	</div>
+
+	<!-- Logo + hamburger -->
+
+	<div class="nav">
+
+		<div class="target-hamburger">	
+			<ul class="hamburger">
+				<li class="bun"></li>
+				<li class="bun"></li>
+			</ul>	
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript" src="../js/bundle.js"></script>
+	<script type="text/javascript" src="../js/minified.js"></script>
+	<script type="text/javascript" src="../js/wp-embed.min.js"></script>
+
+
+
+	<div class="card bg-dark text-white">
+		<img class="card-img-cover" src="../images/meteorite/top.jpg" alt="Card image">
+		<div class="card-img-overlay">
+		</div>
+	</div>
+
+
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="col-sm-2"></div>	
+			<div class="col-sm-5">
+				<HR></HR>
+				<p>这么多真的是天砸下来的坑！只不过有些如米粒，有些是巨石。</p>
+				<p>文章查看<a href ="https://www.thepaper.cn/newsDetail_forward_2175730" target="_blank">陨石坠落地图｜每年陨石掉落地球700次，都掉到哪儿去了？</a> </p>
+				<!-- 	<p><a href="https://wangyasai.github.io/MapVisz/Meteorite/index.html">>>>网页版交互</a></p> -->
+			</div>
+
+
+
+			<div class="col-sm-3">
+				<HR></HR>
+				<dl class="row">
+					<dt class="col-3" style="margin-top: -50px">时间</dt>
+					<dd class="col-9" style="margin-top: -50px;margin-left: 60px">2018/6/20</dd>
+				</dl>
+
+				<HR></HR>
+				<dl class="row">
+					<dt class="col-3" style="margin-top: -50px">工具</dt>
+					<dd class="col-9" style="margin-top: -50px;margin-left: 60px">p5.js</dd>
+				</dl>
+
+				<HR></HR>
+				<dl class="row">
+					<dt class="col-3" style="margin-top: -50px">数据</dt>
+					<dd class="col-9" style="margin-top: -50px;margin-left: 60px"><a href="https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh" target="_blank">NASA</a></dd>
+				</dl>
+			</div>
+			<div class="col-sm-2">
+			</div>	
+		</div>
+	</div>
+
+
+	<script src="../web/meteorite/index.html" ></script>
+
+	<div class ="iconlink" style="margin-top: 120vh">	
+		<div class = "social">
+			<span><a class="icon-weibo" href="https://weibo.com/psaiaevegas/profile?rightmod=1&wvr=6&mod=personnumber"  target="_blank"  data-icon="&#xe906;" ></a></span>
+			<span><a class="icon-zhihu" href="https://www.zhihu.com/people/wang-ya-sai/activities"  target="_blank"  data-icon="&#xe907;"></a></span>
+			<span><a class="icon-instagram" href="http://instagram.com/yasaisai"  target="_blank"  data-icon="&#xe903;"></a></span>
+			<span><a class="icon-twitter" href="https://twitter.com/yasai_wang"  target="_blank"  data-icon="&#xe905;"></a></span>
+			<span><a class="icon-tumblr" href="http://yasaisai.tumblr.com/"  target="_blank"  data-icon="&#xe904;"></a></span>
+		</div>
+	</div>
+
+
+
+</body>
+</html>

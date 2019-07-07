@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>色彩可视化</title>
+	<link rel="icon" href="../images/logo.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	
+	
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?44f8fa2f0b239ea3093628142486b48a";
+			var s = document.getElementsByTagName("script")[0]; 
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+	
+</head>
+
+<body>
+	<div class="nav-slanted"></div>
+	<!-- Full screen menu -->
+	<div class="nav-full-screen height-fixed height-fixed-xs height-fixed-portrait height-100 hidden">
+		<nav>
+			<ul id="menu-menu" class="flex-container flex-align-center justify-center align-center container height-fixed-portrait">
+				<li id="menu-item-19533" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-944 current_page_item menu-item-19533"><a class="navtitle" href="../index.html">主页</a></li>
+				<li id="menu-item-22497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22497"><a class="navtitle" href="../work.html">我的工作</a></li>
+				<li id="menu-item-952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-952"><a class="navtitle" href="../designtools.html">设计工具</a></li>
+				<li id="menu-item-952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-952"><a class="navtitle" href="../dailyPractice.html">日常练习</a></li>	
+				<!-- <li id="menu-item-949" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-949"><a class="navtitle" href="../aboutme.html">关于我</a></li> -->
+			</ul>		
+		</nav>
+	</div>
+	<!-- Logo + hamburger -->
+
+	<div class="nav">
+		<div class="target-hamburger">	
+			<ul class="hamburger">
+				<li class="bun"></li>
+				<li class="bun"></li>
+			</ul>	
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="../js/bundle.js"></script>
+	<script type="text/javascript" src="../js/minified.js"></script>
+	<script type="text/javascript" src="../js/wp-embed.min.js"></script>
+
+
+	<div class="card bg-dark text-white">
+		<img class="card-img-cover" src="../images/color/top.png" alt="Card image">
+	</div>
+
+
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="col-sm-2"></div>	
+			<div class="col-sm-5">
+				<HR></HR>
+				<p style="margin-right: 10px">终于在可视化练习清单上再划去一项了。去年就看到两个颜色的可视化案例，一是<strong>华盛顿邮报</strong>的 </span> <a href ="http://graphics.wsj.com/avengers/" target="_blank">50 Years of 'Avengers' Comic Book Covers Through Color</a>；二是<strong>VOX</strong>做的<a href ="https://www.vox.com/culture/2017/8/24/16162814/game-of-thrones-color-spectrum" target="_blank" > More fire than ice: how Game of Thrones’ use of color has changed over 7 seasons</a>七季《权力的游戏》颜色可视化。</p>
+				<p style="margin-right: 10px">后来看到了<a href ="https://www.c82.net/blog/?id=74" target="_blank">Nicholas Rougeux</a>的<strong>纽约客封面</strong>可视化以及教程，终于开始克服这个坑。他的教程给了我很多参考，学会了用一种新的工具去分析颜色，但最后的处理工具上我选用我更熟悉的processing去呈现效果。</p>
+				<p><a class="badge" href="https://wangyasai.github.io/ColorVisz/" target="_blank"> <span class="icon-point-right"></span> 各国电视剧海报颜色可视化的小交互</a></p>
+
+
+			</div>
+
+
+			<div class="col-sm-3">
+				<HR></HR>
+				<dl class="row">
+					<dt class="col-3" style="margin-top: -50px">时间</dt>
+					<dd class="col-9" style="margin-top: -50px;margin-left: 60px">2018年6月10日</dd>
+				</dl>
+
+				<HR></HR>
+				<dl class="row">
+					<dt class="col-3" style="margin-top: -50px">工具</dt>
+					<dd class="col-9" style="margin-top: -50px;margin-left: 60px">八抓鱼采集器、Processing、Image Color Summarizer、Adobe Illustrator</dd>
+				</dl>
+
+				<HR></HR>
+				<dl class="row">
+					<dt class="col-3" style="margin-top: -50px">数据</dt>
+					<dd class="col-9" style="margin-top: -50px;margin-left: 60px"><a href="https://movie.douban.com/tv/#!type=tv&tag=%E6%97%A5%E5%89%A7&sort=recommend&page_limit=20&page_start=0" target="_blank" >豆瓣热门电视剧</a> </dd>
+				</dl>
+			</div>
+			<div class="col-sm-2"></div>	
+		</div>
+	</div>
+
+
+
+
+	<!-- 下面是文章内容 -->
+	<div class="container-fluid">
+
+		<div class="row" style="background: #ededed; padding-bottom: 100px">
+			<div class="col-sm"></div>
+			<div class="row">
+				<div class="col-sm"></div>
+				<div class="col-sm-5">
+					<img class="card-img" src="../images/color/jj.png" alt="Card image">
+				</div>
+				<div class="col-sm-5">
+					<img class="card-img" src="../images/color/kk.png" alt="Card image">
+				</div>
+
+
+				<div class="col-sm"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm"></div>
+			<div class="col-sm-6">
+				<p>可视化发现</p>
+				<HR></HR>
+				<p>我整理美剧、英剧、日剧、韩剧、国产剧的前500部热门电视剧的海报，最后做出了日剧和韩剧的海报。</p>
+				<p>对比日韩电视剧的海报，发现日本还好喜爱用红色为主色或者点缀色</p>
+			</div>
+			<div class="col-sm"></div>
+		</div>
+
+
+
+		<div class="row">
+			<div class="col-sm"></div>
+			<div class="col-sm-6">
+				<h4>数据与设计</h4>
+				<HR></HR>
+				<p>首先爬取 <a href="https://movie.douban.com/tv/#!type=tv&tag=%E6%97%A5%E5%89%A7&sort=recommend&page_limit=20&page_start=0" target="_blank" >豆瓣热门电视剧</a> 的名字、评分以及海报图片地址，整理成一个csv文件。</p>
+				<p>然后在Processing里面，通过二十行不到的代码就可以把所有图片下载下来。原理是读取csv上的图片地址，播放每一帧并保存500张海报一分钟不到就可以全部以同样大小，序列号+海报名字的格式存储，节约了大量的时间。</p>
+			</div>
+			<div class="col-sm"></div>
+		</div>
+
+
+
+		<div class="row">	
+			<div class="col-sm"></div>	
+			<div class="col-sm-5">
+				<img class="card-img" src="../images/color/color-2.png" alt="Card image">
+			</div>
+			<div class="col-sm-5">
+				<img class="card-img" src="../images/color/color-3.png" alt="Card image">
+			</div>
+			<div class="col-sm"></div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-sm"></div>
+			<div class="col-sm-6">
+				<p>然后通过 <a  href="http://mkweb.bcgsc.ca/color-summarizer/" target="_blank" >IMAGE COLOR SUMMARIZER</a> 分析颜色，这个工具可以快速分析出一张图片的前x种颜色（最多10种），每种颜色的占比，各种颜色的维度，比如RGB、HSB、CMYK等。网站提供了一张图片上传分析的网页版，但一次性处理500张图片靠手动传是相当累的，所以它还提供了cmd模式的批量操作，可以连续分析数百张照片。</p>
+			</div>
+			<div class="col-sm"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3"></div>		
+			<div class="col-sm-6">
+				<img class="card-img" src="../images/color/color-4.png" alt="Card image">
+			</div>
+			<div class="col-sm-3"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm"></div>
+			<div class="col-sm-6">
+				<p>根据IMAGE COLOR SUMMARIZER得出的结果，用processing根据每种颜色占比写出树状图的结构<span class="icon-point-down"></span></p>
+			</div>
+			<div class="col-sm"></div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-sm-4"></div>		
+			<div class="col-sm-4">
+				<img class="card-img" src="../images/color/color-7.png" alt="Card image">
+			</div>
+			<div class="col-sm-4"></div>	
+
+		</div>
+
+
+
+		<div class="row">
+			<div class="col-sm"></div>
+			<div class="col-sm-6">
+				<p>做成一个海报的可视化风格之后，在processing再根据一定的排序原则，把其他海报也画出啊来。</p>
+				<p>排序原则根据图片颜色占比第一的色调的色相（H）排序；若色相（H）相同，则再更具饱和度（S）排序；再则根据明亮度（V）排序</p>
+			</div>
+			<div class="col-sm"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6">
+				<img class="card-img" src="../images/color/color-5.png" alt="Card image">
+				<p>最后输出PDF格式，再在Ai里面做一些排版。</p>
+			</div>
+			<div class="col-sm-3">
+			</div>
+		</div>
+	</div>
+
+
+	<!-- next and previous -->
+	<nav class="page-items">
+		<ul class="page-items">
+			<li class="page-item page-item--next">
+				<a href="lizongsheng.html" class="page-item__link">
+					<span class="page-item__text">下一篇</span><span class="page-item__arrow page-item__arrow--right"></span>
+				</a>
+			</li>
+
+			<li class="page-item page-item--previous">
+				<a href="typhoon.html" class="page-item__link">
+					<span class="page-item__arrow page-item__arrow--left"></span><span class="page-item__text">上一篇</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+
+	<div class ="iconlink">	
+		<div class = "social">
+			<span><a class="icon-weibo" href="https://weibo.com/psaiaevegas/profile?rightmod=1&wvr=6&mod=personnumber"  target="_blank"  data-icon="&#xe906;" ></a></span>
+			<span><a class="icon-zhihu" href="https://www.zhihu.com/people/wang-ya-sai/activities"  target="_blank"  data-icon="&#xe907;"></a></span>
+			<span><a class="icon-instagram" href="http://instagram.com/yasaisai"  target="_blank"  data-icon="&#xe903;"></a></span>
+			<span><a class="icon-twitter" href="https://twitter.com/yasai_wang"  target="_blank"  data-icon="&#xe905;"></a></span>
+			<span><a class="icon-tumblr" href="http://yasaisai.tumblr.com/"  target="_blank"  data-icon="&#xe904;"></a></span>
+		</div>
+	</div>
+
+
+</body>
+</html>

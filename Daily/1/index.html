@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title> </title>
+	<style>
+		* {margin:0;padding:0;}
+		body {background-image:linear-gradient(0deg, #C6FFDD, #FBD786);overflow:hidden;}
+		canvas {width:100%;height:100%}
+	</style>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript"  src="js/three.js"></script>
+	<script type="text/javascript"  src="js/stat.js"></script>
+
+</head>
+
+<body>
+	<script>
+		var  renderer, scene, camera, composer, circle,circle2,skelet, particle;
+		var material;
+		var mesh;
+		var r = 20;
+		var angle = 0;
+
+
+		window.onload = function(){
+			init();
+			animate();
+		}
+
+
+		function init() {
+			renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+			renderer.setPixelRatio((window.devicePixelRatio) ? window.devicePixelRatio : 1);
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			renderer.autoClear = false;
+			renderer.setClearColor(0x000000, 0.0);
+			document.getElementById('canvas').appendChild(renderer.domElement);
+
+			scene = new THREE.Scene();
+
+			camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+			camera.position.z = 700;
+			camera.position.y = 100;
+
+			scene.add(camera);
+
+			particle = new THREE.Object3D();
+
+
+			scene.add(particle);
+
+			material = new THREE.MeshLambertMaterial({
+				color: 0xFFFFFF,
+				flatShading: THREE.FlatShading
+
+			});
+
+			var ambientLight = new THREE.AmbientLight(0x999999);
+			scene.add(ambientLight);
+
+
+			//r*Math.sin(angle), r*Math.sin(angle), r*Math.sin(angle)
+			for(var i = 0; i < 10; i++){
+				for(var j = 0; j < 10; j++){
+					for(var k = 0; k < 10; k++){
+						mesh = new THREE.Mesh( new THREE.BoxGeometry(30,30,30), material );
+						mesh.position.x = -100+i*20;
+						mesh.position.z = -100+j*20;
+						mesh.position.y = k*20;
+						mesh.rotation.x = k/5;
+						mesh.rotation.y = j/5;
+						mesh.rotation.z = i/5;
+						particle.receiveShadow = true;
+						particle.castShadow = true;
+						particle.add(mesh);
+					}
+				}
+			}	
+
+
+			var lights = [];
+			lights[0] = new THREE.DirectionalLight(0xFBD786, 1);
+			lights[0].position.set(1, 0, 0);
+			lights[1] = new THREE.DirectionalLight( 0x8200C9, 1 );
+			lights[1].position.set( 0.75, 1, 0.5 );
+			lights[2] = new THREE.DirectionalLight( 0x8200C9, 1 );
+			lights[2].position.set( -0.75, -1, 0.5 );
+			scene.add(lights[0]);
+			scene.add(lights[1]);
+			scene.add(lights[2]);
+			lights.castShadow = true;
+
+			window.addEventListener('resize', onWindowResize, false);
+
+		};
+
+		function onWindowResize() {
+			camera.aspect = window.innerWidth / window.innerHeight;
+			camera.updateProjectionMatrix();
+			renderer.setSize(window.innerWidth, window.innerHeight);
+		}
+
+
+		Cubes = function(){
+			this.mesh = new THREE.Object3D();
+			this.mesh.name = "cube";
+			
+			var cubeMat = new THREE.MeshLambertMaterial({
+				color: 0xFFFFFF,
+				flatShading: THREE.FlatShading
+			});
+
+			var cubeGeo = new THREE.BoxGeometry(); 
+			var cube = new THREE.mesh(cubeMat, cubeGeo);
+
+
+
+		}
+
+		function animate() {
+			requestAnimationFrame(animate);
+			particle.rotation.y += 0.01;
+			// var timer = Date.now()*0.005;
+  			// camera.position.y = Math.cos(timer)*50;
+
+  			renderer.clear();
+			renderer.render( scene, camera );	
+  			
+  		};
+  	</script>
+
+  	<header class="header">
+  		<nav class="menu">
+  			<ul class="menu-items"><li class="menu-item menu-item--next">
+  				<a href="../2/" class="menu-item__link">
+  					<span class="menu-item__text">Next</span><span class="menu-item__arrow menu-item__arrow--right"></span>
+  				</a>
+  			</li><li class="menu-item menu-item--previous">
+				<!-- 	<a href="/334/" class="menu-item__link">
+						<span class="menu-item__arrow menu-item__arrow--left"></span><span class="menu-item__text">Previous</span>
+					</a> -->
+				</li></ul>
+			</nav>
+			<a href="/" class="intro">
+				<h1 class="title">Code  <br>Design</h1>
+			</a>
+			<p class="description">Designs made in code</p>
+			<div class="day">
+				<p class="day__label">Day 1<br> <span class="day__stripe"></span><br><a href="https://www.instagram.com/dailycssdesign/" class="day__instagram">@Yasai</a></p>
+			</div>
+		</header>
+		<div id="canvas"></div>
+	</body>
+	</html>
