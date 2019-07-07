@@ -67,7 +67,7 @@ function draw () {
 
 	fill(255,100);
 	noStroke();
-	var size = map(windowWidth,375,2000,10,30);
+	var size = map(windowWidth,375,2000,22,30);
 	textSize(size);
 	textAlign(CENTER);
 	text("HI, 我是亚赛", width/2, height*0.4 );
