@@ -7,16 +7,16 @@
 		body { margin: 0; }
 		canvas { width: 100%; height: 100% }
 
-		</style>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	<body>
-		<script src="js/three.js"></script>
-		<script>
+	</style>
+	<link rel="stylesheet" type="text/css" href="daily.css">
+</head>
+<body>
+	<script src="js/three.js"></script>
+	<script>
 			// Our Javascript will go here.
 			var scene, camera, renderer;
 			var mesh,mesh1;
-			var AMOUNT = 5;
+			var AMOUNT = 20;
 
 			init();
 			animate();
@@ -38,7 +38,7 @@
 						var subcamera = new THREE.PerspectiveCamera( 40, ASPECT_RATIO, 0.1, 10);
 						subcamera.viewport = new THREE.Vector4( Math.floor( x * WIDTH ), Math.floor( y * HEIGHT ), Math.ceil( WIDTH ), Math.ceil( HEIGHT ) );
 						subcamera.position.x = ( x/AMOUNT)-0.5;
-						subcamera.position.y = 0. -(y/AMOUNT);
+						subcamera.position.y = -(y/AMOUNT);
 						subcamera.position.z = 1.5;
 						subcamera.position.multiplyScalar(2);
 						subcamera.lookAt(0, 0, 0);
@@ -74,9 +74,7 @@
 				scene.add( background );//新建了什么都要add到场景里面
 
 
-				//加入圆柱体
-				// var geometry = new THREE.CylinderBufferGeometry( 0.5, 0.5, 2, 5);
-				var geometry = new THREE.ConeGeometry(1, 4);
+				var geometry = new THREE.ConeGeometry(20, 4);
 				var material = new THREE.MeshNormalMaterial({ color: 0x4400ff });
 
 				mesh = new THREE.Mesh( geometry, material );
@@ -104,7 +102,7 @@
 				camera.updateProjectionMatrix();
 				for ( var y = 0; y < AMOUNT; y ++ ) {
 					for ( var x = 0; x < AMOUNT; x ++ ) {
-						var subcamera = camera.cameras[ AMOUNT * y + x ];
+						var subcamera = camera.cameras[ AMOUNT * y +  x];
 						subcamera.viewport.set(
 							Math.floor( x * WIDTH ),
 							Math.floor( y * HEIGHT ),
@@ -119,7 +117,7 @@
 
 
 			function animate() {
-				mesh.rotation.x += 0.005;
+				mesh.rotation.y += 0.005;
 				mesh.rotation.z += 0.01;
 				renderer.render( scene, camera );
 				requestAnimationFrame( animate );
@@ -130,22 +128,26 @@
 
 		<header class="header">
 			<nav class="menu">
-				<ul class="menu-items"><li class="menu-item menu-item--next">
-					<a href="../3/" class="menu-item__link">
-						<span class="menu-item__text">Next</span><span class="menu-item__arrow menu-item__arrow--right"></span>
-					</a>
-				</li><li class="menu-item menu-item--previous">
-					<a href="../1/" class="menu-item__link">
-						<span class="menu-item__arrow menu-item__arrow--left"></span><span class="menu-item__text">Previous</span>
-					</a>
-				</li></ul>
+				<ul class="menu-items">
+					<li class="menu-item menu-item--previous">
+						<a href="../1/" class="menu-item__link">
+							<span class="menu-item__arrow menu-item__arrow--left"></span><span class="menu-item__text">Previous</span>
+						</a>
+					</li>
+					<li class="menu-item menu-item--next">
+						<a href="../3/" class="menu-item__link">
+							<span class="menu-item__text">Next</span><span class="menu-item__arrow menu-item__arrow--right"></span>
+						</a>
+					</li>
+				</ul>
 			</nav>
-			<a href="/" class="intro">
-				<h1 class="title">Code  <br>Design</h1>
+			<a href="../../dailyPractice.html" class="intro">
+				<h1 class="title">Daily <br>Coding</h1>
 			</a>
-			<p class="description">Designs made in code</p>
+			<p class="description">Designs made in THREE.js</p>
+			<h1 class="theme">Transition</h1>
 			<div class="day">
-				<p class="day__label">Day 1<br> <span class="day__stripe"></span><br><a href="https://www.instagram.com/dailycssdesign/" class="day__instagram">@Yasai</a></p>
+				<p class="day__label">Day 2<br> <span class="day__stripe"></span><br><a href="../../index.html" class="day__instagram">@Yasai</a></p>
 			</div>
 		</header>
 	</body>

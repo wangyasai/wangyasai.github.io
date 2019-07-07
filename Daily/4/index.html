@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title> </title>
+	<style>
+		* {margin:0;padding:0;}
+		body {background-image:linear-gradient(0deg, #C6FFDD, #FBD786);overflow:hidden;}
+		canvas {width:100%;height:100%}
+	</style>
+	<link rel="stylesheet" type="text/css" href="daily.css">
+	<script type="text/javascript"  src="js/three.js"></script>
+	<script type="text/javascript"  src="js/stat.js"></script>
+
+</head>
+
+<body>
+	<script>
+		var  renderer, scene, camera, composer, circle,circle2,skelet, particle;
+		var material;
+		var mesh;
+		var r = 20;
+		var angle = 0;
+
+
+		window.onload = function(){
+			init();
+			animate();
+		}
+
+
+		function init() {
+			renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+			renderer.setPixelRatio((window.devicePixelRatio) ? window.devicePixelRatio : 1);
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			renderer.autoClear = false;
+			renderer.setClearColor(0x000000, 0.0);
+			document.getElementById('canvas').appendChild(renderer.domElement);
+
+			scene = new THREE.Scene();
+
+			camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+			camera.position.z = 700;
+			camera.position.y = 100;
+
+			scene.add(camera);
+
+
+
+			material = new THREE.MeshLambertMaterial({
+				color: 0xFFFFFF,
+				flatShading: THREE.FlatShading
+
+			});
+
+			var ambientLight = new THREE.AmbientLight(0x999999);
+			scene.add(ambientLight);
+
+			var lights = [];
+			lights[0] = new THREE.DirectionalLight(0xFBD786, 1);
+			lights[0].position.set(1, 0, 0);
+			lights[1] = new THREE.DirectionalLight( 0x8200C9, 1 );
+			lights[1].position.set( 0.75, 1, 0.5 );
+			lights[2] = new THREE.DirectionalLight( 0x8200C9, 1 );
+			lights[2].position.set( -0.75, -1, 0.5 );
+			scene.add(lights[0]);
+			scene.add(lights[1]);
+			scene.add(lights[2]);
+			lights.castShadow = true;
+
+			//particles
+			particle = new THREE.Object3D();
+			var material = new THREE.MeshPhongMaterial({
+				color: 0xFFFFFF,
+				transparent:true,
+				opacity:0.7,
+				flarShading: THREE.FlatShading
+			});
+
+
+			for (var i = 0; i < 1000; i++) {
+				var mesh = new THREE.Mesh(new THREE.PlaneGeometry( 6, Math.random()*20+5, Math.random()*30 ), material);
+				mesh.position.set(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize();
+				mesh.position.multiplyScalar(300);
+				mesh.rotation.set(Math.random() * 2, Math.random() * 2, Math.random() * 2);
+				particle.add(mesh);
+			}
+
+			// scene.add(particle);
+
+			createball();
+			window.addEventListener('resize', onWindowResize, false);
+
+		};
+
+		function onWindowResize() {
+			camera.aspect = window.innerWidth / window.innerHeight;
+			camera.updateProjectionMatrix();
+			renderer.setSize(window.innerWidth, window.innerHeight);
+		}
+
+
+		
+
+		Ball = function(up,down,high,panduan){
+			var geom = new THREE.CylinderGeometry(up,down,high,40,10);
+			geom.mergeVertices();
+			var l = geom.vertices.length;
+
+			this.waves = [];
+
+			for (var i=0;i<l;i++){
+				var v = geom.vertices[i];
+				this.waves.push({y:v.y,
+					x:v.x,
+					z:v.z,
+					y:v.y,
+					ang: Math.PI/2+Math.random()*20,
+					amp: Math.random()*25,
+					speed:0.026
+				});
+			};
+			var mat = new THREE.MeshPhongMaterial({
+				color: 0xFBD786,
+				transparent:true,
+				opacity:1,
+				wireframe: panduan,
+				shading:THREE.FlatShading,
+			});
+
+			this.mesh = new THREE.Mesh(geom, mat);
+			this.mesh.receiveShadow = true;
+		}
+
+		Ball.prototype.moveWaves = function (){
+			var verts = this.mesh.geometry.vertices;
+			var l = verts.length;
+
+			for (var i=0; i<l; i++){
+				var v = verts[i];
+				var vprops = this.waves[i];
+				v.x =  vprops.x + Math.cos(vprops.ang)*vprops.amp;
+				v.y = vprops.y + Math.sin(vprops.ang)*vprops.amp;
+				vprops.ang += vprops.speed;
+			}
+			this.mesh.geometry.verticesNeedUpdate=true;
+			ball2.mesh.rotation.y += .005;
+		}
+
+
+		function createball(){
+			// ball1 = new Ball(0,155,300,false);
+			// ball1.mesh.position.y = 0;
+			// scene.add(ball1.mesh);
+
+			ball2 = new Ball(200,1000,250,false);
+			ball2.mesh.position.y = 50;
+			ball2.mesh.position.x = 150;
+			scene.add(ball2.mesh);
+
+			// ball3 = new Ball(120,500,250,false);
+			// ball3.mesh.position.y = 150;
+			// ball3.mesh.position.x = -250;
+			// ball3.mesh.position.z = -150;
+			// scene.add(ball3.mesh);
+		}
+
+		function animate() {
+			requestAnimationFrame(animate);
+			// ball1.moveWaves();
+			ball2.moveWaves();
+			// ball3.moveWaves();
+			renderer.clear();
+			renderer.render( scene, camera );	
+
+		};
+	</script>
+
+	<header class="header">
+		<nav class="menu">
+			<ul class="menu-items">
+				<li class="menu-item menu-item--previous">
+					<a href="../2/" class="menu-item__link">
+						<span class="menu-item__arrow menu-item__arrow--left"></span><span class="menu-item__text">Previous</span>
+					</a>
+				</li>
+			<!-- 	<li class="menu-item menu-item--next">
+					<a href="../5/" class="menu-item__link">
+						<span class="menu-item__text">Next</span><span class="menu-item__arrow menu-item__arrow--right"></span>
+					</a>
+				</li> -->
+			</ul>
+		</nav>
+		<a href="../../dailyPractice.html" class="intro">
+			<h1 class="title">Daily <br>Coding</h1>
+		</a>
+		<p class="description">Designs made in THREE.js</p>
+		<h1 class="theme">Pink Planet</h1>
+		<div class="day">
+			<p class="day__label">Day 3<br> <span class="day__stripe"></span><br><a href="../../index.html" class="day__instagram">@Yasai</a></p>
+		</div>
+	</header>
+	<div id="canvas"></div>
+</body>
+</html>
