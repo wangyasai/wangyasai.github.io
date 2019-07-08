@@ -1,51 +1,51 @@
-body{
-	margin:0px;
-	padding:0px;
-	font-weight: 300;
-	font-size: 20pt;
+xbody{
+  margin:0px;
+  padding:0px;
+  font-weight: 300;
+  font-size: 20pt;
 }
 
 
 .navbar{
-	text-align: right;
-	min-height: 20px;
-	background-color: #f8f8f8;
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.03);
-	font-weight: 400;
-	border: 1px;
-	font-size: 20pt;
+  text-align: right;
+  min-height: 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.03);
+  font-weight: 400;
+  border: 1px;
+  font-size: 20pt;
 }
 .navbar-toggler{
-	border: none;
+  border: none;
 }
 
 .nav-item  {
-	fill:#333333;
-	padding-top: 5px;
-	padding-bottom: 5pt;
+  fill:#333333;
+  padding-top: 5px;
+  padding-bottom: 5pt;
 }
 .navbar-brand {
-	padding: 0 15px;
+  padding: 0 15px;
 }
 
 .nav-link:link { 
-	color:#666666; 
-	text-decoration:none; 
+  color:#666666; 
+  text-decoration:none; 
 } 
 .nav-link:visited { 
-	color:#666666; 
-	text-decoration:none; 
+  color:#666666; 
+  text-decoration:none; 
 
 } 
 .nav-link:hover { 
-	color: #FF458C; 
-	font-weight: 500;
-	text-decoration: none; 
+  color: #FF458C; 
+  font-weight: 500;
+  text-decoration: none; 
 } 
 
 .nav-link:active { 
-	color:#FF458C; 
-	text-decoration:none; 
+  color:#FF458C; 
+  text-decoration:none; 
 } 
 
 
@@ -61,21 +61,21 @@ body{
 
 
 .navtitle a:hover{
-  color:white; 
+  color:#FC8AA3;    
   text-decoration:none; 
 }
 
 .container p{
-	font-weight: 350;
-	line-height: 30px;
+  font-weight: 350;
+  line-height: 30px;
 }
 
 
 
 /*bottom*/
 .connect{
-	padding:10px;
-	margin-top: 50px;
+  padding:10px;
+  margin-top: 50px;
 }
 
 
@@ -101,20 +101,20 @@ body{
 
 
 .connectme{
-	text-align: center;
-	padding-top: 50px;
-	padding-bottom: 50px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 
 /*正文*/
 
 .row{
-	margin-top: 30px;
-	line-height: 30px;
-	fill:#666666;
-	font-weight: 300;
-	padding-top: 30px;
+  margin-top: 30px;
+  line-height: 30px;
+  fill:#666666;
+  font-weight: 300;
+  padding-top: 30px;
 }
 
 p{
@@ -123,22 +123,22 @@ p{
 
 /*文章介绍里的链接*/
 .col-sm-7 a:link { 
-	color:#666666;
-	text-decoration:underline; 
+  color:#666666;
+  text-decoration:underline; 
 } 
 .col-sm-7 a:visited { 
-	color:#666666;
-	text-decoration:underline;   
+  color:#666666;
+  text-decoration:underline;   
 } 
 .col-sm-7 a:hover { 
-	color:#FFFFFF; 
-	text-decoration:none; 
-	background-color:#FF458C;
+  color:#FFFFFF; 
+  text-decoration:none; 
+  background-color:#FF458C;
 }
 .col-sm-7 a:active { 
-	color:#FFFFFF; 
-	text-decoration:none; 
-	background-color:#FF458C;
+  color:#FFFFFF; 
+  text-decoration:none; 
+  background-color:#FF458C;
 } 
 
 /*文章介绍里的链接*/
@@ -162,99 +162,101 @@ p{
 } 
 
 .col-9 a:link { 
-	color:#666666;
-	text-decoration:underline; 
+  color:#666666;
+  text-decoration:underline; 
 } 
 .col-9 a:visited { 
-	color:#666666;
-	text-decoration:underline;   
+  color:#666666;
+  text-decoration:underline;   
 } 
 .col-9 a:hover { 
-	color:#FFFFFF; 
-	text-decoration:none; 
-	background-color:#FF458C;
+  color:#FFFFFF; 
+  text-decoration:none; 
+  background-color:#FF458C;
 }
 .col-9 a:active { 
-	color:#FFFFFF; 
-	text-decoration:none; 
-	background-color:#FF458C;
+  color:#FFFFFF; 
+  text-decoration:none; 
+  background-color:#FF458C;
 } 
 
 
 
 /*正文里面的链接*/
 .col-sm-5 a:link { 
-	color:#666666;
-	text-decoration:underline; 
+  color:#666666;
+  text-decoration:underline; 
 } 
 .col-sm-5 a:visited { 
-	color:#666666;
-	text-decoration:underline;  
+  color:#666666;
+  text-decoration:underline;  
 } 
 .col-sm-5 a:hover { 
-	color:#FFFFFF; 
-	text-decoration:none; 
-	background-color:#FF458C;
+  color:#FFFFFF; 
+  text-decoration:none; 
+  background-color:#FF458C;
 }
 .col-sm-5 a:active { 
-	color:#FFFFFF; 
-	text-decoration:none; 
+  color:#FFFFFF; 
+  text-decoration:none; 
 } 
 
 .badge-danger{
-	font-weight: 150;
+  font-weight: 150;
 }
 
 .badge{
-	background: #f2f2f2; 
-	font-size: 12pt;
+  background: #000000; 
+  font-size: 12pt;
+  font-weight: 500;
 }
 
 a.badge:link{
-	background: #000000;
-	color:#FFFFFF;
-	text-decoration: none;
-}
-a.badge:visited{
-	color:#FFFFFF;
-	text-decoration: none;
+  background: #000000;
+  color:#FFFFFF;
+  text-decoration: none;
 }
 
-a.badge-danger:hover{
-	background :#FF458C; 
-	text-decoration: none;
+a.badge:visited{
+  color:#FFFFFF;
+  text-decoration: none;
+}
+
+a.badge:hover{
+  background :#FF458C; 
+  text-decoration: none;
 }
 
 a.badge:active{
-	background: #FF458C; 
-	text-decoration: none;
+  background: #FFFFFF; 
+  text-decoration: none;
 }
 
 
 .card-title{
-	/*background-color:rgba(239,255,59, 1);*/
-	font-size: 16pt;
-	font-weight: 400;
-	color: black;
+  /*background-color:rgba(239,255,59, 1);*/
+  font-size: 16pt;
+  font-weight: 400;
+  color: black;
 }
 
 .card-group-top{
-	margin-top: 120px;
-	padding-bottom: 50px;
-	padding-top: 40px;
+  margin-top: 120px;
+  padding-bottom: 50px;
+  padding-top: 40px;
 }
 
 a.card-img-top span: hover{
-	background-color: rgba(255,255,255, 1);
+  background-color: rgba(255,255,255, 1);
 }
 
 
 #carouselExampleIndicators{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:100%;
-	z-index:-1;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+  z-index:-1;
 }
 
 .card{
@@ -277,9 +279,9 @@ a.card-img-top span: hover{
 
 
 a.iconlink {
-	font-family: 'youriconfont';
-	text-decoration:none;
-	color: #666666; 
+  font-family: 'youriconfont';
+  text-decoration:none;
+  color: #666666; 
 }
 
 a.iconlink:link{
@@ -287,8 +289,8 @@ a.iconlink:link{
   color: #999999;
 }
 a.iconlink:hover {
-	text-decoration:none;
-	color: pink;
+  text-decoration:none;
+  color: pink;
 }
 
 a.iconlink:visted{
@@ -297,15 +299,15 @@ a.iconlink:visted{
 }
 
 h4{
-	color:#FF458C;
-	margin-top: 60px;
-	margin-bottom: 20px;
+  color:#FF458C;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 
 .code{
-	border: 5px;
-	background: red;
+  border: 5px;
+  background: red;
 
 }
 
@@ -610,7 +612,7 @@ a.BACK-NEXT:visted{
                                                                                                                                                         -webkit-animation: 0.6s fade cubic-bezier(0.895, 0.03, 0.685, 0.22) reverse;
                                                                                                                                                         animation: 0.6s fade cubic-bezier(0.895, 0.03, 0.685, 0.22) reverse;
                                                                                                                                                         opacity: 0; }
-                                                                                                                                                        nav ul li.current-menu-item a {
+                                                                                                                                                        nav ul li.current-page-item a {
                                                                                                                                                           opacity: .3; }
                                                                                                                                                           @media (min-width: 992px) {
                                                                                                                                                             nav ul li:hover a {
@@ -723,7 +725,7 @@ a.BACK-NEXT:visted{
                                                                                                                                                                                                   left: 33px;
                                                                                                                                                                                                   height: 44px; } }
                                                                                                                                                                                                   .target-logo:hover {
-                                                                                                                                                                                                    color:#343434; }
+                                                                                                                                                                                                    color:#FC8AA3; }
                                                                                                                                                                                                     .target-logo.active {
                                                                                                                                                                                                       color: #343434;
                                                                                                                                                                                                       -webkit-transition-delay: .5s;
@@ -3178,6 +3180,30 @@ a.BACK-NEXT:visted{
 }
 
 
+/*This style is made by @DailyCssDesign*/
+.page-items{padding:0;margin:0;list-style:none}
+.page-item{position:absolute;bottom:50;font-weight:700;font-size:16px}
+.page-item--previous{left:0}
+.page-item--next{right:0}
+.page-item__link{padding:50px 300px;display:block}
+.page-item__text,.page-item__arrow{display:inline-block;vertical-align:middle}
+.page-item__arrow{height:1px;width:80px;background-color:#fff;background-color:currentColor;position:relative}
+.page-item__arrow:after{content:'';display:block;position:absolute;top:50%;border:5px solid transparent;margin-top:-5px}
+.page-item__arrow--left{margin-right:5px}
+.page-item__arrow--left:after{border-right:7px solid;left:-7px}
+.page-item__arrow--right{margin-left:5px}
+.page-item__arrow--right:after{border-left:7px solid;right:-7px}@media (-moz-touch-enabled: 0), (pointer: fine){
+.page-item__text,.page-item__arrow{-webkit-transition:-webkit-transform 0.5s cubic-bezier(0.42, 0.01, 0.17, 1.38);transition:-webkit-transform 0.5s cubic-bezier(0.42, 0.01, 0.17, 1.38);-o-transition:-o-transform 0.5s cubic-bezier(0.42, 0.01, 0.17, 1.38);-moz-transition:transform 0.5s cubic-bezier(0.42, 0.01, 0.17, 1.38), -moz-transform 0.5s cubic-bezier(0.42, 0.01, 0.17, 1.38);transition:transform 0.5s cubic-bezier(0.42, 0.01, 0.17, 1.38);transition:transform 0.5s cubic-bezier(0.42, 0.01, 0.17, 1.38), -webkit-transform 0.5s cubic-bezier(0.42, 0.01, 0.17, 1.38), -moz-transform 0.5s cubic-bezier(0.42, 0.01, 0.17, 1.38), -o-transform 0.5s cubic-bezier(0.42, 0.01, 0.17, 1.38)}
+.page-item__link:hover 
+.page-item__arrow{-webkit-transform:translateX(10px);-moz-transform:translateX(10px);-ms-transform:translateX(10px);-o-transform:translateX(10px);transform:translateX(10px)}
+.page-item__link:hover 
+.page-item__text{-webkit-transform:translateX(6px);-moz-transform:translateX(6px);-ms-transform:translateX(6px);-o-transform:translateX(6px);transform:translateX(6px);-webkit-transition-duration:0.8s;-moz-transition-duration:0.8s;-o-transition-duration:0.8s;transition-duration:0.8s}
+.page-item--previous .page-item__link:hover 
+.page-item__arrow{-webkit-transform:translateX(-10px);-moz-transform:translateX(-10px);-ms-transform:translateX(-10px);-o-transform:translateX(-10px);transform:translateX(-10px)}
+.page-item--previous .page-item__link:hover 
+.page-item__text{-webkit-transform:translateX(-6px);-moz-transform:translateX(-6px);-ms-transform:translateX(-6px);-o-transform:translateX(-6px);transform:translateX(-6px)}}@media (max-width: 600px){
+.page-item__link{padding:30px 10px}
+.page-item__arrow{width:40px}}
 
 
 

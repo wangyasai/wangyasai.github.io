@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>北上广天气可视化</title>
+	<link rel="icon" href="../images/logo.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	
+</head>
+
+<body>
+	<!-- navbar -->
+	<div class="nav-slanted"></div>
+	<!-- Full screen menu -->
+	<div class="nav-full-screen height-fixed height-fixed-xs height-fixed-portrait height-100 hidden">
+		<nav>
+			<ul id="menu-menu" class="flex-container flex-align-center justify-center align-center container height-fixed-portrait">
+				<li id="menu-item-19533" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-944 current_page_item menu-item-19533"><a class="navtitle" href="../index.html">主页</a></li>
+				<li id="menu-item-22497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22497"><a class="navtitle" href="../work.html">我的工作</a></li>
+				<li id="menu-item-952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-952"><a class="navtitle" href="../designtools.html">设计工具</a></li>
+				<li id="menu-item-952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-952"><a class="navtitle" href="../dailyPractice.html">日常练习</a></li>	
+			<!-- 	<li id="menu-item-949" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-949"><a class="navtitle" href="../aboutme.html">关于我</a></li> -->
+			</ul>		
+		</nav>
+	</div>
+	<!-- Logo + hamburger -->
+
+	<div class="nav">
+		<div class="target-hamburger">	
+			<ul class="hamburger">
+				<li class="bun"></li>
+				<li class="bun"></li>
+			</ul>	
+		</div>
+	</div>
+
+
+
+
+	<script type="text/javascript" src="../js/bundle.js"></script>
+	<script type="text/javascript" src="../js/minified.js"></script>
+	<script type="text/javascript" src="../js/wp-embed.min.js"></script>
+
+
+
+	<div class="card bg-dark text-white">
+		<img class="card-img-cover" src="../images/weather/top.png" alt="Card image">
+		<div class="card-img-overlay">
+		</div>
+	</div>
+
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-2"></div>	
+			<div class="col-sm-5">
+				<HR></HR>
+				<p>北上广天气可视化是我的第一个processing项目，也是继北京天气之后的另一个关于天气的可视化。</p>
+				<p>这张海报模仿的是一位国外设计师的<strong>Sonja Kuijpers</strong>的 </span> <a href ="https://www.behance.net/gallery/22539163/dataviz-Weather-Eindhoven-2014" target="_blank">dataviz Weather Eindhoven 2014</a></p>
+				<p>由于我是用processing做的，所以当我做出一个城市的时候，把其他城市替换进行就可以生成不同城市的天气状况。这也是编程让我觉得强大快捷之处。</p>
+
+			</div>
+			
+			<div class="col-sm-3">
+				<HR></HR>
+				<dl class="row">
+					<dt class="col-3" style="margin-top: -50px">时间</dt>
+					<dd class="col-9" style="margin-top: -50px;margin-left: 60px">2017/6</dd>
+				</dl>
+
+				<HR></HR>
+				<dl class="row">
+					<dt class="col-3" style="margin-top: -50px">工具</dt>
+					<dd class="col-9" style="margin-top: -50px;margin-left: 60px">Processing、Adobe Illustrator</dd>
+				</dl>
+
+				<HR></HR>
+				<dl class="row">
+					<dt class="col-3" style="margin-top: -50px">数据</dt>
+					<dd class="col-9" style="margin-top: -50px;margin-left: 60px"><a href="https://www.wunderground.com/" target="_blank">Weather Underground</a><br><a href="https://www.accuweather.com/zh/us/united-states-weather" target="_blank">Accuweather</a></dd>
+				</dl>
+
+				<HR></HR>
+				<dl class="row">
+					<dt class="col-3" style="margin-top: -50px">其他</dt>
+					<dd class="col-9" style="margin-top: -50px">第一个用Processing做的信息图</dd>
+				</dl>
+			</div>		
+			<div class="col-sm-2"></div>	
+		</div>
+	</div>
+
+
+
+
+	<!-- 下面是文章内容 -->
+
+
+
+
+
+
+
+	<div class="row">	
+		<div class="col-sm"></div>	
+		<div class="col-sm-6">
+			<img class="card-img-top" src="../images/weather/1.png" alt="Card image cap">
+			<p style = "margin:20px"><strong>北京</strong> | 看最外圈的点柱子，代表的是能见度。高低错落，不论是好是坏，总会在看到北京的朋友晒超级蓝天以及超级雾霾天。再看看那降水，╮(╯▽╰)╭，干的必须包里必备补水面膜。</p>
+		</div>
+		<div class="col-sm"></div>	
+	</div>
+
+	<div class="row">	
+		<div class="col-sm"></div>	
+		<div class="col-sm-6">
+			<img class="card-img-top" src="../images/weather/2.png" alt="Card image cap">
+			<p style = "margin:20px"><strong>上海</strong> | 能见度一般，没有北京那种极高的能见度。</p>
+		</div>
+		<div class="col-sm"></div>	
+	</div>
+
+	<div class="row">	
+		<div class="col-sm"></div>	
+		<div class="col-sm-6">
+			<img class="card-img-top" src="../images/weather/3.png" alt="Card image cap">
+			<p style = "margin:20px"><strong>广州</strong> | 广州就相对湿漉漉了，南方的潮南天会把憋着难受。当然，这里也更温暖。比较广东人眼里广东以北都是北方。</p>
+		</div>
+		<div class="col-sm"></div>	
+	</div>
+
+
+
+	<div class="row">
+		<div class="col-sm"></div>
+		<div class="col-sm-6">
+			<HR></HR>
+			<div class="card mb-3">
+				<a class="card-img-top" href ="beijingsky.html"><img class="card-img-top" src="../images/beijingsky/top.png" alt="Card image cap"></a>
+			</div>
+		</div>
+		<div class="col-sm"></div>
+	</div>
+</div>
+
+
+
+	<!-- next and previous -->
+	<nav class="page-items">
+		<ul class="page-items">
+			<li class="page-item page-item--next">
+				<a href="sleep.html" class="page-item__link">
+					<span class="page-item__text">下一篇</span><span class="page-item__arrow page-item__arrow--right"></span>
+				</a>
+			</li>
+
+			<li class="page-item page-item--previous">
+				<a href="lizongsheng.html" class="page-item__link">
+					<span class="page-item__arrow page-item__arrow--left"></span><span class="page-item__text">上一篇</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+
+
+<div class ="iconlink">	
+	<div class = "social">
+		<span><a class="icon-weibo" href="https://weibo.com/psaiaevegas/profile?rightmod=1&wvr=6&mod=personnumber"  target="_blank"  data-icon="&#xe906;" ></a></span>
+		<span><a class="icon-zhihu" href="https://www.zhihu.com/people/wang-ya-sai/activities"  target="_blank"  data-icon="&#xe907;"></a></span>
+		<span><a class="icon-instagram" href="http://instagram.com/yasaisai"  target="_blank"  data-icon="&#xe903;"></a></span>
+		<span><a class="icon-twitter" href="https://twitter.com/yasai_wang"  target="_blank"  data-icon="&#xe905;"></a></span>
+		<span><a class="icon-tumblr" href="http://yasaisai.tumblr.com/"  target="_blank"  data-icon="&#xe904;"></a></span>
+	</div>
+</div>
+</body>
+</html>

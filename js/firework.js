@@ -103,11 +103,11 @@ var count19 = 1;
 var logo,legend;
 
 function preload(){
-  data17 = loadTable("web/firework/data/2017.csv", 'csv');
-  data18 = loadTable("web/firework/data/2018.csv", 'csv');
-  data19 = loadTable("web/firework/data/2019.csv", 'csv');
-  logo = loadImage("web/firework/images/logo.png","png");
-  legend = loadImage("web/firework/images/legend.jpg","jpg");
+  data17 = loadTable("../web/firework/data/2017.csv", 'csv');
+  data18 = loadTable("../web/firework/data/2018.csv", 'csv');
+  data19 = loadTable("../web/firework/data/2019.csv", 'csv');
+  logo = loadImage("../web/firework/images/logo.png","png");
+  legend = loadImage("../web/firework/images/legend.jpg","jpg");
 }
 
 

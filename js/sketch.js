@@ -17,8 +17,8 @@ var mConstraint;
 
 
 var ground,groundL,groundR;
-let t = ["p5.js","Processing","Ai","Ps","Data","Design","Python","Indesign","Matter.js","Github","Yasai","AE","QGis"];
-let r= [6,7,7,6,6,6,1,3,2,3,8,5,4,4];
+let t = ["p5.js","Processing","Ai","Ps","Data","Design","Indesign","Matter.js","Github","Yasai","AE","QGis","D3.js","THREE.js","BootStrap","html","css"];
+let r= [6,7,7,6,6,6,3,2,3,5,5,4,2,2,2,4,3];
 
 
 function setup () {
@@ -32,12 +32,12 @@ function setup () {
 	ground = Bodies.rectangle( width/2, height, width*3,2, options);
 	groundL = Bodies.rectangle( 0, height/2, 2,height*3,options);
 	groundR = Bodies.rectangle( width, height/2, 2, height*3,options);
-	groundT = Bodies.rectangle( width/2, -300,width*3,100,options);
+	groundT = Bodies.rectangle( width/2, -3000,width*3,100,options);
 	World.add(world, [ground,groundL,groundR,groundT]);
 	for(var i = 0 ; i < t.length; i++){
 		var radius = map(r[i],0,10,30,70);
 		var n = map(windowWidth,400,2000,1,2.5);
-		circles.push(new Circle(random(width),random(-200), radius*n,t[i]));
+		circles.push(new Circle(random(width),random(-200,-2000), radius*n,t[i]));
 	}
 
 
@@ -65,13 +65,14 @@ function draw () {
 	noStroke();
 	rect(0,0,width,height);
 
-	fill(255,70);
+	fill(255,100);
 	noStroke();
-	textSize(30);
+	var size = map(windowWidth,375,2000,22,30);
+	textSize(size);
 	textAlign(CENTER);
-	text("HI, 我是亚赛", width/2, height/3 );
-	text("数据可视化设计师", width/2, height/2.4);
-	text("设计工具制造玩家", width/2, height/2 );
+	text("HI, 我是亚赛", width/2, height*0.4 );
+	text("数据可视化设计师", width/2, height*0.45);
+	text("设计工具制造玩家", width/2, height*0.5);
 
 	for(var i = 0; i < t.length; i++){
 		circles[i].show();
@@ -79,6 +80,10 @@ function draw () {
 
 }
 
+
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}
 
 
 
