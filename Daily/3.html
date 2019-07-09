@@ -3,16 +3,16 @@
 <html>
 <head>
 	<meta charset=utf-8>
-	<title> </title>
+	<title>Day 3</title>
+	<link rel="icon" href="../images/logo.ico" type="image/x-icon">
 	<style>
 		* {margin:0;padding:0;}
-		body {background-image:linear-gradient(0deg, #C6FFDD, #FBD786);overflow:hidden;}
+		body {background-image:linear-gradient(0deg, #85EDD9, #FBD786);overflow:hidden;}
 		canvas {width:100%;height:100%}
 	</style>
-	<link rel="stylesheet" type="text/css" href="daily.css">
-	<script type="text/javascript"  src="js/three.js"></script>
-	<script type="text/javascript"  src="js/stat.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="./css/daily.css">
+	<script type="text/javascript"  src="./js/three.js"></script>
 </head>
 
 <body>
@@ -87,7 +87,7 @@
 				particle.add(mesh);
 			}
 
-			// scene.add(particle);
+			scene.add(particle);
 
 			createball();
 			window.addEventListener('resize', onWindowResize, false);
@@ -103,8 +103,9 @@
 
 		
 
-		Ball = function(up,down,high,panduan){
-			var geom = new THREE.CylinderGeometry(up,down,high,40,10);
+		Ball = function(up,down,panduan){
+			var geom = new THREE.OctahedronGeometry(up,down);
+			// geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
 			geom.mergeVertices();
 			var l = geom.vertices.length;
 
@@ -124,7 +125,7 @@
 			var mat = new THREE.MeshPhongMaterial({
 				color: 0xFBD786,
 				transparent:true,
-				opacity:1,
+				opacity:0.9,
 				wireframe: panduan,
 				shading:THREE.FlatShading,
 			});
@@ -145,32 +146,21 @@
 				vprops.ang += vprops.speed;
 			}
 			this.mesh.geometry.verticesNeedUpdate=true;
-			ball2.mesh.rotation.y += .005;
+			ball.mesh.rotation.y += .005;
 		}
 
 
 		function createball(){
-			// ball1 = new Ball(0,155,300,false);
-			// ball1.mesh.position.y = 0;
-			// scene.add(ball1.mesh);
-
-			ball2 = new Ball(200,1000,250,false);
-			ball2.mesh.position.y = 50;
-			ball2.mesh.position.x = 150;
-			scene.add(ball2.mesh);
-
-			// ball3 = new Ball(120,500,250,false);
-			// ball3.mesh.position.y = 150;
-			// ball3.mesh.position.x = -250;
-			// ball3.mesh.position.z = -150;
-			// scene.add(ball3.mesh);
+			ball = new Ball(180,5,false);
+			ball.mesh.position.y = 100;
+			scene.add(ball.mesh);
 		}
 
 		function animate() {
 			requestAnimationFrame(animate);
-			// ball1.moveWaves();
-			ball2.moveWaves();
-			// ball3.moveWaves();
+			ball.moveWaves();
+			particle.position.y = 100;
+			particle.rotation.y += 0.0040;
 			renderer.clear();
 			renderer.render( scene, camera );	
 
@@ -181,25 +171,26 @@
 		<nav class="menu">
 			<ul class="menu-items">
 				<li class="menu-item menu-item--previous">
-					<a href="../2/" class="menu-item__link">
+					<a href="./2.html" class="menu-item__link">
 						<span class="menu-item__arrow menu-item__arrow--left"></span><span class="menu-item__text">Previous</span>
 					</a>
 				</li>
-			<!-- 	<li class="menu-item menu-item--next">
-					<a href="../5/" class="menu-item__link">
+				<li class="menu-item menu-item--next">
+					<a href="./4.html" class="menu-item__link">
 						<span class="menu-item__text">Next</span><span class="menu-item__arrow menu-item__arrow--right"></span>
 					</a>
-				</li> -->
+				</li>
 			</ul>
 		</nav>
-		<a href="../../dailyPractice.html" class="intro">
-			<h1 class="title">Daily <br>Coding</h1>
-		</a>
-		<p class="description">Designs made in THREE.js</p>
-		<h1 class="theme">Pink Planet</h1>
-		<div class="day">
-			<p class="day__label">Day 3<br> <span class="day__stripe"></span><br><a href="../../index.html" class="day__instagram">@Yasai</a></p>
+		<div class="intro">
+			<h1 class="title">Web<br>Graphics<br>Design<br>+++</h1>
 		</div>
+		<p class="description">Designs made in THREE.js</p>
+		<p class="descriptionRight">Designs made in THREE.js</p>
+		<h1 class="theme">Fragmented planet</h1>
+		<div class="day">
+			<p class="day__label">Day 3<br> <span class="day__stripe"></span><br><a href="../dailyPractice.html" class="day__instagram">@Yasai</a></p>
+	</div>
 	</header>
 	<div id="canvas"></div>
 </body>
