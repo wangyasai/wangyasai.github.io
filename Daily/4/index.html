@@ -80,7 +80,7 @@
 			sphere3= new THREE.Mesh(geo3, mat2);
 			scene.add(sphere3);
 
-			geo4 = new THREE.SphereBufferGeometry(36,60,6);
+			geo4 = new THREE.SphereBufferGeometry(40,60,6);
 			sphere4= new THREE.Mesh(geo4, mat2);
 			scene.add(sphere4);
 
@@ -107,13 +107,6 @@
 			renderer.setSize(window.innerWidth, window.innerHeight);
 		}
 
-		function circles(){
-			for(var x = 0; x< 10 ; x++){
-				for(var y = 0; y< 10 ; y++){
-
-				}
-			}
-		}
 		var step = 0;
 		function animate() {
 			step+=0.02;
@@ -123,7 +116,7 @@
 			sphere1.rotation.z += 0.02;
 
 
-			sphere2.position.y = -60;
+			sphere2.position.y = 0;
 			sphere2.position.x = -300;
 			sphere2.rotation.x += 0.02;
 
@@ -153,21 +146,21 @@
 						<span class="menu-item__arrow menu-item__arrow--left"></span><span class="menu-item__text">Previous</span>
 					</a>
 				</li>
-			<!-- 	<li class="menu-item menu-item--next">
+				<li class="menu-item menu-item--next">
 					<a href="../5/" class="menu-item__link">
 						<span class="menu-item__text">Next</span><span class="menu-item__arrow menu-item__arrow--right"></span>
 					</a>
-				</li> -->
+				</li>
 			</ul>
 		</nav>
 		<a href="../../dailyPractice.html" class="intro">
-			<h1 class="title">Daily <br>Coding</h1>
+			<h1 class="title">Web<br>Graphics<br>Design<br>+++</h1>
 		</a>
 		<p class="description">Designs made in THREE.js</p>
 		<h1 class="theme">illusion</h1>
 		<div class="day">
-			<p class="day__label">Day 4<br> <span class="day__stripe"></span><br><a href="../../index.html" class="day__instagram">@Yasai</a></p>
-		</div>
+			<p class="day__label">Day 4<br> <span class="day__stripe"></span><br><a href="https://www.instagram.com/dailycssdesign/" class="day__instagram">@Yasai</a></p>
+	</div>
 	</header>
 </body>
 </html>
