@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>垃圾分类可视化手册</title>
+	<link rel="icon" href="../images/logo.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script type="text/javascript" src="../web/garbage/js/matter.js" style="padding-top: 100vh"></script>
+	<script type="text/javascript" src="../web/garbage/js/p5.min.js" style="padding-top: 100vh"></script>
+
+
+	<script>	
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?44f8fa2f0b239ea3093628142486b48a";
+			var s = document.getElementsByTagName("script")[0]; 
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</head>
+
+
+
+<body>
+	<div class="nav-slanted"></div>
+	<!-- Full screen menu -->
+	<div class="nav-full-screen height-fixed height-fixed-xs height-fixed-portrait height-100 hidden">
+		<nav>
+			<ul id="menu-menu" class="flex-container flex-align-center justify-center align-center container height-fixed-portrait">
+				<li id="menu-item-19533" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-944 current_page_item menu-item-19533"><a class="navtitle" href="../">主页</a></li>
+				<li id="menu-item-22497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22497"><a class="navtitle" href="./">我的工作</a></li>
+				<li id="menu-item-952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-952"><a class="navtitle" href="../designtools.html">设计工具</a></li>
+				<li id="menu-item-952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-952"><a class="navtitle" href="../Daily">日常练习</a></li>
+				<!-- 	<li id="menu-item-949" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-949"><a class="navtitle" href="../aboutme.html">关于我</a></li> -->
+			</ul>	
+		</nav>
+	</div>
+
+	<!-- Logo + hamburger -->
+
+	<div class="nav">
+
+		<div class="target-hamburger">	
+			<ul class="hamburger">
+				<li class="bun"></li>
+				<li class="bun"></li>
+			</ul>	
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="../js/bundle.js"></script>
+	<script type="text/javascript" src="../js/minified.js"></script>
+	<script type="text/javascript" src="../js/wp-embed.min.js"></script>
+
+	<!-- <script type="text/javascript" src="../web/garbage/js/sketch.js" style="padding-top: -100vh"></script>
+	<script type="text/javascript" src="../web/garbage/js/rubbish.js" style="padding-top: -100vh"></script>
+
+-->
+<div class="card bg-dark text-white">
+	<img class="card-img-cover" src="../images/garbage/garbage.png" alt="Card image">
+	<div class="card-img-overlay">
+	</div>
+</div>
+
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-2"></div>	
+		<div class="col-sm-5">
+			<HR></HR>
+			<p>为理清垃圾分类规律，我们从上海市垃圾分类查询平台上筛选了2055件物品的垃圾分类信息。看可视化教你如何分类垃圾。</p><a class="badge" href="http://projects.thepaper.cn/thepaper-cases/839studio/ljfl/index.html" target="_blank"> <span class="icon-point-right"></span> 垃圾分类可视化查询手册</a> 
+
+		</div>
+
+		<div class="col-sm-3">
+			<HR></HR>
+			<dl class="row">
+				<dt class="col-3" style="margin-top: -50px">时间</dt>
+				<dd class="col-9" style="margin-top: -50px;margin-left: 60px">2019/6/28</dd>
+			</dl>
+
+			<HR></HR>
+			<dl class="row">
+				<dt class="col-3" style="margin-top: -50px">工具</dt>
+				<dd class="col-9" style="margin-top: -50px;margin-left: 60px">Matter.js、D3.js、P5.js、Adobe Illustrator</dd>
+			</dl>
+
+			<HR></HR>
+			<dl class="row">
+				<dt class="col-3" style="margin-top: -50px">数据</dt>
+				<dd class="col-9" style="margin-top: -50px;margin-left: 60px">上海市绿化和市容管理局，上海垃圾分类查询平台</dd>
+			</dl>
+		</div>
+		<div class="col-sm-2">
+		</div>	
+	</div>
+</div>
+
+
+
+<!-- 下面是文章内容 -->
+<div class="container-fluid">
+
+	<div class="row">	
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+			<p>在前一段时间刚好做了个<a href ="../index.html" target= "_blank"> 个人主页效果 </a>，你会看到一个小球球掉落下来的，所以在做这个题的时候，我就不妨把垃圾从屏幕上方掉落吧，所以有了这个有小交互的封面效果。</p>
+			<img class="card-img" src="../images/garbage/cover.gif" alt="Card image">
+
+			<p>这里运用了一个<a href ="http://brm.io/matter-js/" target="_blank"> matter.js </a> 的物理效果库，简单的代码就可以写出不错的掉落碰撞效果。在 Shiffman 的 <a href= "https://www.youtube.com/watch?v=uITcoKpbQq4&list=PLRqwX-V7Uu6bLh3T_4wtrmVHOrOEM1ig_&index=2" target="_blank">教程</a>帮助下，可以做到基本的物理掉落以及触碰物体可以引起碰撞的效果。在教程和官方文档案例中，一般会用几何形状去掩饰，这里只是把图片只是代替几何部分，等同于几何中的矩形，达到小黄鸭大战小龙虾的场景。</p>
+			<div class="row">	
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10"><img class="card-img" src="../images/garbage/matterjs.gif" alt="Card image"></div>
+				<div class="col-sm-11"></div>
+			</div>
+			<p></p>
+		</div>
+		<div class="col-sm-3"></div>
+	</div>
+
+	<div class="row">	
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+			<p>在内容部分，我们想找出词与词的关系，通过把相同词根的词融合在一起，可以看出<strong>《垃圾词汇表》</strong>，虽然拥有同一个词根，但每个词根下面可能拥有不同属性的垃圾，干垃圾、湿垃圾、可回收垃圾、有害垃圾。当它这些相同词根的“垃圾”揉成一团，带有“瓶”、“包装“、”金属“等等的词汇会是什么样子呢？</p>
+			<p>这个部分我很喜欢的一个数据可视化设计师<a href ="https://twitter.com/NadiehBremer"></span> @NadiehBremer </a>写了一份关于用 svg 融合的教程<a href ="https://www.visualcinnamon.com/2016/06/fun-data-visualizations-svg-gooey-effect.html" target="_blank"> More fun data visualizations with the gooey effect </a> 教程，可以做到让点揉在一起的效果，因为我不太会 svg，所以这个部分的效果都是我的同事承包了。</p>
+			<p></p>
+			
+		</div>
+		<div class="col-sm-3"></div>
+	</div>
+	<div class="row">	
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8"><img class="card-img" src="../images/garbage/gooey.png" alt="Card image">
+		</div>
+		<div class="col-sm-2"></div>
+
+	</div>
+
+
+	<div class="row">	
+		<div class="col-sm-3"></div>
+		
+
+		<div class="col-sm-6">
+			<p>点击每个揉杂的垃圾可以看到是什么组成了它以及每个垃圾属性的比例。</p><img class="card-img" src="../images/garbage/content.gif" alt="Card image">
+		</div>
+		<div class="col-sm-3"></div>
+	</div>
+</div>
+
+
+
+
+<!-- next and previous -->
+<nav class="page-items">
+	<ul class="page-items">
+		<li class="page-item page-item--next">
+			<a href="datacreators.html" class="page-item__link">
+				<span class="page-item__text">下一篇</span><span class="page-item__arrow page-item__arrow--right"></span>
+			</a>
+		</li>
+
+		<!-- 	<li class="page-item page-item--previous">
+				<a href="datacreator.html" class="page-item__link">
+					<span class="page-item__arrow page-item__arrow--left"></span><span class="page-item__text">上一篇</span>
+				</a>
+			</li> -->
+		</ul>
+	</nav>
+
+
+	<div class ="iconlink">	
+		<div class = "social">
+			<span><a class="icon-weibo" href="https://weibo.com/psaiaevegas/profile?rightmod=1&wvr=6&mod=personnumber"  target="_blank"  data-icon="&#xe906;" ></a></span>
+			<span><a class="icon-zhihu" href="https://www.zhihu.com/people/wang-ya-sai/activities"  target="_blank"  data-icon="&#xe907;"></a></span>
+			<span><a class="icon-instagram" href="http://instagram.com/yasaisai"  target="_blank"  data-icon="&#xe903;"></a></span>
+			<span><a class="icon-twitter" href="https://twitter.com/yasai_wang"  target="_blank"  data-icon="&#xe905;"></a></span>
+			<span><a class="icon-tumblr" href="http://yasaisai.tumblr.com/"  target="_blank"  data-icon="&#xe904;"></a></span>
+		</div>
+	</div>
+
+</body>
+</html>
