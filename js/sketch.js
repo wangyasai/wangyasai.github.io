@@ -17,8 +17,8 @@ var mConstraint;
 
 
 var ground,groundL,groundR;
-let t = ["p5.js","Processing","Ai","Ps","Data","Design","Indesign","Matter.js","Github","Yasai","AE","QGis","D3.js","THREE.js","BootStrap","html","css"];
-let r= [6,7,7,6,6,6,3,2,3,5,5,4,2,2,2,4,3];
+let t = ["p5.js","Processing","Ai","Ps","Data","Design","Indesign","Matter.js","Yasai","AE","QGis","D3.js","THREE.js","BootStrap","Html","css"];
+let r= [6,7,7,6,6,3,2,3,5,3,4,1,1,2,4,3];
 
 
 function setup () {
@@ -50,8 +50,6 @@ function setup () {
 
 	mConstraint = MouseConstraint.create(engine,options);
 	World.add(world, mConstraint);
-
-
 } 
 
 

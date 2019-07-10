@@ -17,7 +17,13 @@ this.show = function(){
   translate(pos.x, pos.y);
 
   rotate(angle);
-  strokeWeight(2.5);
+
+  if(windowWidth>450){
+    strokeWeight(2.5);
+  }else{
+    strokeWeight(1.5);
+  }
+
   stroke(20);
 
 
