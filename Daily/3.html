@@ -54,16 +54,16 @@
 
 			});
 
-			var ambientLight = new THREE.AmbientLight(0x999999);
+			var ambientLight = new THREE.AmbientLight(0xfb86f4);
 			scene.add(ambientLight);
 
 			var lights = [];
-			lights[0] = new THREE.DirectionalLight(0xFBD786, 1);
-			lights[0].position.set(1, 0, 0);
-			lights[1] = new THREE.DirectionalLight( 0x8200C9, 1 );
-			lights[1].position.set( 0.75, 1, 0.5 );
-			lights[2] = new THREE.DirectionalLight( 0x8200C9, 1 );
-			lights[2].position.set( -0.75, -1, 0.5 );
+			lights[0] = new THREE.DirectionalLight(0x80caab, 1);
+			lights[0].position.set(1, 1, 0);
+			lights[1] = new THREE.DirectionalLight( 0x84e3ce, 0.5 );
+			lights[1].position.set(0, 1, 0.5 );
+			lights[2] = new THREE.DirectionalLight( 0xca4ec3, 0.2);
+			lights[2].position.set( 0, -1, 0.5 );
 			scene.add(lights[0]);
 			scene.add(lights[1]);
 			scene.add(lights[2]);
@@ -74,8 +74,9 @@
 			var material = new THREE.MeshPhongMaterial({
 				color: 0xFFFFFF,
 				transparent:true,
-				opacity:0.7,
-				flarShading: THREE.FlatShading
+				opacity:0.5,
+				flarShading: THREE.FlatShading,
+				side: THREE.DoubleSide,
 			});
 
 
@@ -119,7 +120,7 @@
 					y:v.y,
 					ang: Math.PI/2+Math.random()*20,
 					amp: Math.random()*25,
-					speed:0.026
+					speed: 0.026
 				});
 			};
 			var mat = new THREE.MeshPhongMaterial({
@@ -145,7 +146,7 @@
 				v.y = vprops.y + Math.sin(vprops.ang)*vprops.amp;
 				vprops.ang += vprops.speed;
 			}
-			this.mesh.geometry.verticesNeedUpdate=true;
+			this.mesh.geometry.verticesNeedUpdate = true;
 			ball.mesh.rotation.y += .005;
 		}
 
@@ -172,7 +173,7 @@
 			<ul class="menu-items">
 				<li class="menu-item menu-item--previous">
 					<a href="./2.html" class="menu-item__link">
-						<span class="menu-item__arrow menu-item__arrow--left"></span><span class="menu-item__text">Previous</span>
+						<span class="menu-item__arrow menu-item__arrow--left"></span><span class="menu-item__text">Prev</span>
 					</a>
 				</li>
 				<li class="menu-item menu-item--next">
@@ -183,13 +184,13 @@
 			</ul>
 		</nav>
 		<div class="intro">
-			<h1 class="title">Web<br>Graphics<br>Design<br>+++</h1>
+			<h1 class="title"><a href="./">Web<br>Graphics<br>Design<br>+++</a></h1>
 		</div>
 		<p class="description">Designs made in THREE.js</p>
 		<p class="descriptionRight">Designs made in THREE.js</p>
 		<h1 class="theme">Fragmented planet</h1>
 		<div class="day">
-			<p class="day__label">Day 3<br> <span class="day__stripe"></span><br><a href="./" class="day__instagram">@Yasai</a></p>
+			<p class="day__label">Day 3<br> <span class="day__stripe"></span><br><a href="./" class="day__index">@Yasai</a></p>
 	</div>
 	</header>
 	<div id="canvas"></div>
