@@ -55,7 +55,7 @@ h1{font-size:70px;line-height:1.4;font-family:"Montserrat", sans-serif;margin:0}
 				.description:hover{opacity:0.4}}.day{position:absolute;top:40px;right:40px;z-index:50;text-align:right}
 				.day__label{font-weight:550;font-size:32px;line-height:1;margin:0}
 				.day__stripe{width:50px;height:3px;background-color:#fff;background-color:currentColor;display:inline-block;margin:3px 0}
-				.day__instagram{font-weight:450;font-size:0.55em}@media (max-width: 600px){
+				.day__index{font-weight:450;font-size:0.55em}@media (max-width: 600px){
 					.intro{top:10px;left:10px}
 					.description{opacity:0;left:0}
 					.day{top:10px;right:10px}.title,.day__label{font-size:25px}}
