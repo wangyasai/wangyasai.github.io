@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+## Hi，我是亚赛
+我是一名数据可视化设计师。
+[个人主页](https://wangyasai.github.io/) 
 
-You can use the [editor on GitHub](https://github.com/wangyasai/wangyasai.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### 设计工具
+📝工具所生成的图片可以任意使用    
 
-### Markdown
+![](https://github.com/wangyasai/wangyasai.github.io/blob/master/images/cover/tools/particles.gif)  
+🔗[**粒子循环运动神器**](https://wangyasai.github.io/Particles-Emission/)     
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![](https://github.com/wangyasai/wangyasai.github.io/blob/master/images/cover/tools/perlinnoise.gif)     
+🔗工具链接: https://wangyasai.github.io/Perlin-Noise/    
 
-```markdown
-Syntax highlighted code block
+![](https://github.com/wangyasai/wangyasai.github.io/blob/master/images/cover/tools/star.gif)  
+🔗[**万箭齐发毫发无伤背景生成器**](https://wangyasai.github.io/Stars-Emmision/)    
+  
+![](https://github.com/wangyasai/wangyasai.github.io/blob/master/images/cover/tools/mosaic.gif)  
+🔗[**Awesome Masoic**](https://wangyasai.github.io/Awesome-Mosaic/)      
 
-# Header 1
-## Header 2
-### Header 3
+![](https://github.com/wangyasai/wangyasai.github.io/blob/master/images/cover/tools/playaball.gif)  
+🔗[**Play a ball**](https://wangyasai.github.io/Play-a-ball/)       
 
-- Bulleted
-- List
+![](https://github.com/wangyasai/wangyasai.github.io/blob/master/images/cover/tools/speedline.gif)  
+🔗[**Speed Line**](https://wangyasai.github.io/Speed-Line/)   
 
-1. Numbered
-2. List
+![](https://github.com/wangyasai/wangyasai.github.io/blob/master/images/cover/tools/bezier.gif)  
+🔗[**Bezier**](https://wangyasai.github.io/Bezier/)   
+      
+![](https://github.com/wangyasai/wangyasai.github.io/blob/master/images/cover/tools/PerlinNoisePainter.gif)  
+🔗[**PerlinNoisePainter**](https://wangyasai.github.io/PerlinNoisePainter/)   
 
-**Bold** and _Italic_ and `Code` text
+![](https://github.com/wangyasai/wangyasai.github.io/blob/master/images/cover/tools/TheMatrix1.gif)  
+🔗[**TheMatrix**](https://wangyasai.github.io/TheMatrix/)   
 
-[Link](url) and ![Image](src)
-```
+![](https://github.com/wangyasai/wangyasai.github.io/blob/master/images/cover/tools/wavefont.gif)  
+🔗[**WaveFont**](https://wangyasai.github.io/waveFont/)   
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wangyasai/wangyasai.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## 联系方式
++ 微博:[@亚赛大人](https://weibo.com/psaiaevegas/profile?rightmod=1&wvr=6&mod=personnumber)
++ 知乎:[@亚赛大人](https://www.zhihu.com/people/wang-ya-sai/activities)
++ instagram:[@yasai_wang](https://www.instagram.com/yasaisai/)
++ twitter:[@yasai_wang](https://twitter.com/yasai_wang)
