@@ -1,19 +1,20 @@
 ## Hi，我是亚赛
-我是一名数据可视化设计师。
-[个人主页](https://wangyasai.github.io/) 
+大学学的广告学，毕业后却在新闻业从事数据可视化工作。2017年开始自学编程，最初是为了做更酷的数据可视化作品，误打误撞产出了十款设计小工具，成了业余的设计玩具制造玩家。目前主要用的编程语言是 Processing 和 P5.js，尝试用编程去解锁设计/数据可视化的更多可能性。
+
+🔗[个人网站](https://wangyasai.github.io/) 
 
 
 ### 设计工具
 📝工具所生成的图片可以任意使用    
 
 ![](https://github.com/wangyasai/wangyasai.github.io/blob/master/images/cover/tools/particles.gif)  
-🔗[**粒子循环运动神器**](https://wangyasai.github.io/Particles-Emission/)     
+🔗[**Particles Emission**](https://wangyasai.github.io/Particles-Emission/)     
 
 ![](https://github.com/wangyasai/wangyasai.github.io/blob/master/images/cover/tools/perlinnoise.gif)     
-🔗工具链接: https://wangyasai.github.io/Perlin-Noise/    
+🔗[**Perlin Noise**] https://wangyasai.github.io/Perlin-Noise/    
 
 ![](https://github.com/wangyasai/wangyasai.github.io/blob/master/images/cover/tools/star.gif)  
-🔗[**万箭齐发毫发无伤背景生成器**](https://wangyasai.github.io/Stars-Emmision/)    
+🔗[**Stars Emmision**](https://wangyasai.github.io/Stars-Emmision/)    
   
 ![](https://github.com/wangyasai/wangyasai.github.io/blob/master/images/cover/tools/mosaic.gif)  
 🔗[**Awesome Masoic**](https://wangyasai.github.io/Awesome-Mosaic/)      
@@ -35,6 +36,8 @@
 
 ![](https://github.com/wangyasai/wangyasai.github.io/blob/master/images/cover/tools/wavefont.gif)  
 🔗[**WaveFont**](https://wangyasai.github.io/waveFont/)   
+
+
 
 ## 联系方式
 + 微博:[@亚赛大人](https://weibo.com/psaiaevegas/profile?rightmod=1&wvr=6&mod=personnumber)
