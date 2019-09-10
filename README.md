@@ -1,5 +1,5 @@
 # Hi，我是亚赛
-🔗[个人网站](https://wangyasai.github.io/) 。大学学的广告学，毕业后却在新闻业从事数据可视化工作。2017年开始自学编程，最初是为了做更酷的数据可视化作品，误打误撞产出了十款设计小工具，成了业余的设计玩具制造玩家。目前主要用的编程语言是 Processing 和 P5.js，尝试用编程去解锁设计/数据可视化的更多可能性。
+大学学的广告学，毕业后却在新闻业从事数据可视化工作。2017年开始自学编程，最初是为了做更酷的数据可视化作品，误打误撞产出了十款设计小工具，成了业余的设计玩具制造玩家。目前主要用的编程语言是 Processing 和 P5.js，尝试用编程去解锁设计/数据可视化的更多可能性。
 
 
 
@@ -41,3 +41,4 @@
 + 知乎:[@亚赛大人](https://www.zhihu.com/people/wang-ya-sai/activities)
 + instagram:[@yasai_wang](https://www.instagram.com/yasaisai/)
 + twitter:[@yasai_wang](https://twitter.com/yasai_wang)
++ [个人网站](https://wangyasai.github.io/) 。
