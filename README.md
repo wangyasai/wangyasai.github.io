@@ -5,7 +5,7 @@
 
 ---
 
-# 数据可视化作品(https://wangyasai.github.io/Work/) 
+## [数据可视化作品](https://wangyasai.github.io/Work/) 
 🔗[烟花燃放可视化](https://wangyasai.github.io/Work/firework.html)    
 梳理了50座城市过往两年的烟花爆竹管理政策，并对比了各座城市除夕夜的空气质量。  
 🔗[60年的数据告诉你：这是太阳流浪最久的一次](https://wangyasai.github.io/Work/rain.html)     
@@ -20,7 +20,7 @@
 
 ---
 
-# 设计工具(https://wangyasai.github.io/designtools.html) 
+## [设计工具](https://wangyasai.github.io/designtools.html) 
 📝工具所生成的图片可以任意使用  
 🔗[万箭齐发biubiubiu生成器](https://wangyasai.github.io/Particles-Emission/)       
 🔗[向量场迹生成器](https://wangyasai.github.io/Perlin-Noise/)    
@@ -36,7 +36,7 @@
 
 ---
 
-# 来找我~
+## 来找我~
 + 微博:[@亚赛大人](https://weibo.com/psaiaevegas/profile?rightmod=1&wvr=6&mod=personnumber)
 + 知乎:[@亚赛大人](https://www.zhihu.com/people/wang-ya-sai/activities)
 + instagram:[@yasai_wang](https://www.instagram.com/yasaisai/)
