@@ -1,0 +1,96 @@
+ *{
+  margin: 0;
+  padding: 0;
+}
+
+html,body{
+  width: 100%;
+}
+
+.page{
+  width: 100%;
+  height: 100vh;
+}
+
+.page-cover{
+  background-color: rgb(33,33,33);
+  text-align: center;
+  color: white;
+}
+
+
+
+@media screen and (max-width: 2000px ) {
+  .page-cover .lead{
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 40px;
+    padding-top: 70px;
+  }
+  .title_pc{
+    width:40%;
+    height: 100px;
+    display: none;
+    padding-top: 20%;
+
+  }
+  .firework{
+    padding-top: 5%;
+    padding-left: 10%;
+    z-index:1;
+    transform:scale(1.5);
+    position:absolute;
+  }
+  .firework2{
+    padding-top: 10%;
+    padding-left: 50%;
+    transform:scale(2);
+    z-index:1;
+    scale:5;
+    position:absolute;
+  }
+  .firework3{
+    padding-top: 25%;
+    padding-left: 20%;
+    transform:scale(1);
+    z-index:1;
+    scale:5;
+    position:absolute;
+  }
+  canvas{
+    position:absolute;
+    top: 100vh;
+    z-index: -1;
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  .page-cover .lead{
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 30px;
+    padding-top: 5%;
+    padding-left: 8%;
+    padding-right: 8%;
+    text-align: center;
+  }
+
+  .title_mb{
+    width: 70%;
+    padding-top: 45%;
+  }
+
+  .firework{
+    width:100%;
+    padding-top: 15%;
+    padding-left: 10%;
+    z-index:1;
+    position:absolute;
+  }
+  canvas{
+    position:absolute;
+    top: 170vh;
+    z-index: -1;
+  }
+}
