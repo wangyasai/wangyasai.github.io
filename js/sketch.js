@@ -56,11 +56,14 @@ function draw () {
 	background ('#445FAC');
 	var percent = norm(sin(PI/2+frameCount/100), -1, 1);
 	var between = lerpColor(color('#eedacf'),color('#f3f3f3'), percent);
+
 	fill(between);
 	noStroke();
 	rect(0,0,width,height);
 
+
 	fill('#ea7689');
+
 	noStroke();
 	var size = map(windowWidth,375,2000,18,22);
 	textSize(size);
@@ -78,7 +81,8 @@ function draw () {
 	text("也是一名设计工具制造玩家", width/2-200, height*0.51,size*20,500);
 	text("误打误撞产出10款提高效率的设计小工具", width/2-200, height*0.55,size*20,500);
 
-	for(var i = 0; i < t.length; i++){ 
+
+	for(var i = 0; i < t.length; i++){
 		circles[i].show();
 	}   
 
