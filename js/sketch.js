@@ -56,14 +56,14 @@ function setup () {
 
 function draw () {
 	pixelDensity(2);
-	background ('#FC8AA3');
+	background ('#445FAC');
 	var percent = norm(sin(PI/2+frameCount/100), -1, 1);
-	var between = lerpColor(color('#97E4FF'),color('#FC8AA3'), percent);
+	var between = lerpColor(color('#eedacf'),color('#EADAB9'), percent);
 	fill(between);
 	noStroke();
 	rect(0,0,width,height);
 
-	fill(255,100);
+	fill(255, 160);
 	noStroke();
 	var size = map(windowWidth,375,2000,22,30);
 	textSize(size);
@@ -72,7 +72,12 @@ function draw () {
 	text("数据可视化设计师", width/2, height*0.45);
 	text("设计工具制造玩家", width/2, height*0.5);
 
+	// text('广告学背景，做了新闻业的数据可视化设计师',width/2, height*0.55);
+	// text('喜欢用设计和编程去把数据描绘的有吸引力',width/2, height*0.60);
+
 	for(var i = 0; i < t.length; i++){
+		
+ 
 		circles[i].show();
 	}   
 

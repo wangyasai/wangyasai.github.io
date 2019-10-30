@@ -27,10 +27,22 @@ this.show = function(){
   stroke(20);
 
 
-  fill('#2452FF');
+
+  if(this.r <=3){
+    fill('#fababb');
+        
+      }else if(this.r > 3 && this.r <= 6){
+        fill('#eedacf');
+      }else if(this.r > 6){
+         fill('#ea7689');
+
+    }
+
+  noStroke();
   ellipse(0,0,this.r*2-2);
 
-  stroke(255);
+  stroke(255,100);
+  strokeWeight(3);
   noFill();
   arc(0, 0, this.r*2*0.85, this.r*2*0.85, -PI/2, -PI/4);
   arc(0, 0, this.r*2*0.85, this.r*2*0.85, -PI/5, -PI/7);
