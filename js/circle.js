@@ -24,8 +24,8 @@ this.show = function(){
     strokeWeight(1.5);
   }
 
-
   fill('#ea7689');
+
   noStroke();
   ellipse(0,0,this.r*2-2);
 
