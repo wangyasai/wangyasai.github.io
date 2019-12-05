@@ -98,12 +98,12 @@ var count18 = 1;
 var logo,legend;
 
 function preload(){
-  data17 = loadTable("../web/firework/data/2017.csv", 'csv');
-  data18 = loadTable("../web/firework/data/2018.csv", 'csv');
-  data19 = loadTable("../web/firework/data/2019.csv", 'csv');
-  logo = loadImage("../web/firework/images/logo.png","png");
-  legend = loadImage("../web/firework/images/legend.jpg","jpg");
+  data17 = loadTable("data/2017.csv", 'csv');
+  data18 = loadTable("data/2018.csv", 'csv');
+  logo = loadImage("images/logo.png","png");
+  legend = loadImage("images/legend.jpg","jpg");
 }
+
 
 function setup(){
   if(windowWidth<750){
@@ -139,23 +139,19 @@ function setup(){
   for(var j = 1; j < cols; j++){
     sum17[j] = 0;
     sum18[j] = 0;   
-    sum19[j] = 0;
     r[j]=[];
 
     for(var i = 3; i < rows; i++){
       sum17[j] += data17.getNum(i,j);
       sum18[j] += data18.getNum(i,j);
-      sum19[j] += data19.getNum(i,j);
       r[j][i]= 0;
     }
 
     avg17[j] = sum17[j]/24;
     avg18[j] = sum18[j]/24;
-    avg19[j] = sum19[j]/24;
     posX[j] = map(int((j+1)), 1, 50, left, right);
     y17[j] = map(avg17[j], 0, 200, bottom, above);  
-    y18[j] = map(avg18[j], 0, 200, bottom, above); 
-    y19[j] = map(avg19[j], 0, 200, bottom, above);   
+    y18[j] = map(avg18[j], 0, 200, bottom, above);   
     posY[j] = bottom;
     alpha[j] = 255;
 
@@ -167,15 +163,12 @@ function setup(){
     targetX19[j] = posX[j];
     fireworks17[j] = new Firework(posX[j],posY[j], targetX17[j],y17[j]);
     fireworks18[j] = new Firework(posX[j],posY[j], targetX18[j],y18[j]);
-    fireworks19[j] = new Firework(posX[j],posY[j], targetX19[j],y19[j]);
-
   }
   oneFirework = new Firework(width/2, bottom-50,width/2,y17[1]);
   firework18 = new Firework(width/2,  bottom-50,width/2,y18[1]+100);
 
   selection(temp17, rank);
   selection(temp18, rank);
-  selection(temp19, rank);
 }
 
 
@@ -219,16 +212,14 @@ function draw(){
       fill(33,220);
       rect(0,0,width,height);
       imageMode(CENTER);
-      image(legend,width/2,height/2,400,600);
+      image(legend,width/2,height/2,500,700);
       noFill();
       stroke(255);
       rectMode(CENTER);
-      rect(width/2,height/2,400,600);
+      rect(width/2,height/2,500,700);
     }
 
   }  
-
-
 }
 
 
@@ -507,9 +498,9 @@ function fireworkStart(){
     }
   }
 
+
   function policies(){ 
     for(var i = 1; i<6;i++){
-
       if(policyS[i]<= time){ 
         lx[i] += (targetLx[i]-lx[i])*0.09;
         stroke(241,214,171);
